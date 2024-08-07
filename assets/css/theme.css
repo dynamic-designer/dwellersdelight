@@ -1,5 +1,19 @@
 @import url(fonts.css);
+:root {
+    --color-primary: #200FE2;
+}
 
 body {
     font-family: 'Inter';
+}
+
+h1, h2, h3, h4, h5, h5 {
+    font-family: 'Canela';
+}
+h2 {
+    color: #222325;
+    font-size: 48px;
+}
+h2 span {
+    color: var(--color-primary);
 }
