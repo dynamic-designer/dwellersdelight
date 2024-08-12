@@ -1,3 +1,12 @@
-p {
-    color: red;
+.text-primary--gradient {
+    background: linear-gradient(135deg, rgba(32,15,226,1) 0%, rgba(37,44,90,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h2 {
+    margin-bottom: 40px;
+}
+
+section {
+    margin-top: 100px;
 }

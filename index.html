@@ -7,10 +7,277 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
   </head>
   <body>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-propertyPartnersRegistration">Property Partners Registration</button>
+
+    <!-- **************** HEADER START **************** -->
+    <header class="header-sticky header-absolute">
+        <!-- Logo Nav START -->
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <!-- Logo START -->
+                <a class="navbar-brand me-0" href="javascript:void(0);">
+                    <img class="navbar-brand-item" src="assets/images/Dwellers_Delight_Livinng_LTD-Logo.png" alt="Dwellers Delight Livinng LTD">
+                </a>
+                <!-- Logo END -->
     
+                <!-- Main navbar START -->
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+    
+                        <!-- Nav item -->
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">Locations</a> </li>
+    
+                        <!-- Nav item -->
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">Who We Work With</a> </li>
+    
+                        <!-- Nav item -->
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">Blog</a> </li>
+    
+                        <!-- Nav item -->
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">Partnerships</a> </li>
+    
+                        <!-- Nav item -->
+                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">About Us</a> </li>
+                    </ul>
+                </div>
+                <!-- Main navbar END -->
+    
+                <!-- Buttons -->
+                <ul class="nav align-items-center dropdown-hover ms-sm-2">
+    
+                    <!-- Sign up button -->
+                    <li class="nav-item me-2 d-none d-sm-block">
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-propertyPartnersRegistration">Create Account</button>
+                    </li>
+                    <!-- Responsive navbar toggler -->
+                    <li class="nav-item">
+                        <button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-animation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </li>	
+                </ul>
+    
+            </div>
+        </nav>
+        <!-- Logo Nav END -->
+    </header>
+    <!-- **************** HEADER END   **************** -->
+
+    <!-- **************** HERO SLIDER START **************** -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="hero-slider rounded-5">
+                        <div class="content-wrapper">
+                            <h1>Explore a curated selection of homes and hotels tailored to your perfect stay.</h1>
+                            <div class="row">
+                                <div class="col-md-9 mx-auto">
+                                    <div class="search-bar-package">
+                                        <div class="search-form">
+                                            <div class="row gx-3">
+                                                <div class="col">
+                                                    <input class="form-control" type="text"
+                                                        placeholder="Search Location" aria-label="Search Location">
+                                                </div>
+                                                <div class="col">
+                                                    <input class="form-control" type="text"
+                                                        placeholder="Search City" aria-label="Search City">
+                                                </div>
+                                                <div class="col-md-auto">
+                                                    <button type="button" class="btn btn-primary--gradient btn-search px-5 py-3">Search</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="partners-package">
+                            <div class="partners-logos">
+                                <div class="">
+                                    <img src="assets/images/partners/booking.com.png" alt="Booking.Com">
+                                </div>
+                                <div class="">
+                                    <img src="assets/images/partners/vrbo.png" alt="Vrbo">
+                                </div>
+                                <div class="">
+                                    <img src="assets/images/partners/tripadvisor.png" alt="Trip Advisor">
+                                </div>
+                                <div class="">
+                                    <img src="assets/images/partners/agoda.png" alt="Agoda">
+                                </div>
+                                <div class="">
+                                    <img src="assets/images/partners/expedia.png" alt="ExPedia">
+                                </div>
+                                <div class="">
+                                    <img src="assets/images/partners/airbnb.png" alt="Airbnb">
+                                </div>
+                                <div class="">
+                                    <img src="assets/images/partners/hotelshopuk.png" alt="Hotel Shop UK">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- **************** HERO SLIDER END   **************** -->
+
+
+    <!-- **************** LOCATION CAROUSAL START **************** -->
+    <section>
+        <div class="container">
+            <div class="text-center">
+                <h2 class="text-primary--gradient">Stay in the Heart of the our Best Locations</h2>
+            </div>
+            <div class="swiper" data-swiper-options='{
+                "spaceBetween": 30,
+                "autoplay": {
+                    "delay": 3000,
+                    "disableOnInteraction": false
+                },
+                "breakpoints": {
+                    "1200": {"slidesPerView": 6},
+                    "1600": {"slidesPerView": 7}
+                }}'>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="location-package location-package--violet">
+                            <a href="javascript:void(0);" class="">
+                                <h3><span>London,</span> United Kingdom</h3>
+                                <picture>
+                                    <img class="" alt="Website Development" src="https://placehold.co/180x150/white/black">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="location-package location-package--pullmanGreen">
+                            <a href="javascript:void(0);" class="">
+                                <h3><span>Aberdeen,</span> Scotland</h3>
+                                <picture>
+                                    <img class="" alt="Website Development" src="https://placehold.co/180x150/white/black">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="location-package location-package--ochre">
+                            <a href="javascript:void(0);" class="">
+                                <h3><span>Birmingham,</span> United Kingdom</h3>
+                                <picture>
+                                    <img class="" alt="Website Development" src="https://placehold.co/180x150/white/black">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="location-package location-package--roseEbony">
+                            <a href="javascript:void(0);" class="">
+                                <h3><span>Amsterdam,</span> Netherland</h3>
+                                <picture>
+                                    <img class="" alt="Website Development" src="https://placehold.co/180x150/white/black">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="location-package location-package--navyBlue">
+                            <a href="javascript:void(0);" class="">
+                                <h3><span>Manchester,</span> United Kingdom</h3>
+                                <picture>
+                                    <img class="" alt="Website Development" src="https://placehold.co/180x150/white/black">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="location-package location-package--lincolnGreen">
+                            <a href="javascript:void(0);" class="">
+                                <h3><span>Southampton,</span> United Kingdom</h3>
+                                <picture>
+                                    <img class="" alt="Website Development" src="https://placehold.co/180x150/white/black">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="location-package location-package--bloodRed">
+                            <a href="javascript:void(0);" class="">
+                                <h3><span>Hertfordshire,</span> United Kingdom</h3>
+                                <picture>
+                                    <img class="" alt="Website Development" src="https://placehold.co/180x150/white/black">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- **************** LOCATION CAROUSAL END   **************** -->
+
+    <!-- **************** SERVICES CARDS START **************** -->
+    <section>
+        <div class="container">
+            <div>
+                <h2>
+                    <span>Dwellers Delight</span><br>
+                    Elevate Your Experience with Our<br>
+                    Premium Property Services.
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="service-package">
+                        <div class="icon">
+                            <img src="assets/images/icons/hotel.png" />
+                        </div>
+                        <h6>Top Locations</h6>
+                        <p class="mb-0">We have scoured the market to find the best accommodation for you. Our thorough search ensures that every detail is considered, bringing you the finest options tailored to your needs and preferences.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-package">
+                        <div class="icon">
+                            <img src="assets/images/icons/spa.png" />
+                        </div>
+                        <h6>Luxury Accommodations</h6>
+                        <p class="mb-0">Experience the best in luxury accommodation with our gorgeous living spaces. Each option has been thoughtfully designed to offer unparalleled comfort and style.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-package">
+                        <div class="icon">
+                            <img src="assets/images/icons/bathtub.png" />
+                        </div>
+                        <h6>Best Amenities</h6>
+                        <p class="mb-0">Comfort, top-tier amenities, and cozy bedrooms are just the beginning of what we offer. Each space is crafted to ensure a memorable and relaxing stay.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-package">
+                        <div class="icon">
+                            <img src="assets/images/icons/booking.png" />
+                        </div>
+                        <h6>Smooth Reservation</h6>
+                        <p class="mb-0">We offer easy reservation and online booking. Enjoy a hassle-free experience from start to finish. Secure your perfect stay with just a few clicks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- **************** SERVICES CARDS END   **************** -->
+    
+    <!-- **************** PROPERTY PARTNER REGISTRATION / LOGIN POPUP START **************** -->
     <div class="modal fade" id="modal-propertyPartnersRegistration" tabindex="-1" aria-labelledby="modal-propertyPartnersRegistrationLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
@@ -140,19 +407,22 @@
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M31.7176 9.42235C26.605 10.8682 20.7023 12.3072 15.0239 12.6665C10.1705 12.9731 5.48249 12.4968 1.64531 10.4702C1.1044 10.1849 0.427044 10.381 0.134517 10.9091C-0.158455 11.4368 0.0431009 12.0975 0.584007 12.3833C4.7699 14.5935 9.87393 15.1716 15.1679 14.8366C20.9485 14.4712 26.9578 13.0227 32.1728 11.5559C32.778 12.7517 34.031 13.8666 36.2383 14.6892C39.6287 15.9528 44.2578 15.9371 49.1345 15.2251C56.2073 14.1928 63.8156 11.7313 68.7074 9.98217C68.9081 9.91083 69.2069 9.79731 69.5725 9.64767C69.684 9.88778 69.8088 10.1244 69.9471 10.3567C71.1466 12.3811 73.2692 14.018 75.432 14.6026C89.1486 18.3096 105.157 13.8679 118.192 10.2532C118.78 10.0892 119.124 9.48717 118.959 8.90994C118.789 8.33272 118.174 7.99734 117.581 8.16133C104.912 11.6751 89.3582 16.1085 76.025 12.5064C74.384 12.0627 72.7876 10.8047 71.8779 9.26836C71.7754 9.09698 71.6862 8.92168 71.6015 8.74377C73.3985 7.8751 75.5122 6.6641 76.6493 5.36784C77.8177 4.03896 78.1075 2.62047 77.0908 1.28071C76.2168 0.135389 74.8924 0.0379499 73.5145 0.631707C72.0295 1.26766 70.5 2.75442 70.0051 3.45214C69.0775 4.75536 68.7832 6.16908 68.9527 7.54756C68.5157 7.72764 68.1607 7.86161 67.9418 7.9399C63.157 9.65027 55.7203 12.0645 48.8045 13.0741C44.3546 13.7239 40.1277 13.8105 37.0339 12.6578C35.7144 12.1658 34.8426 11.5916 34.3694 10.9252C35.3032 10.6529 36.2036 10.385 37.0637 10.1292C38.7649 9.62331 42.3069 8.78597 44.8375 7.29353C46.85 6.10689 48.2145 4.49265 48.1352 2.46909C48.0946 1.42947 47.4778 0.735656 46.4964 0.346778C45.0297 -0.23393 42.4933 0.047066 41.5488 0.24281C38.6842 0.835262 34.8609 3.28773 32.9693 6.0512C32.2143 7.15389 31.7653 8.30748 31.7176 9.42235ZM34.0707 8.74289C34.88 8.50539 35.6622 8.27223 36.4136 8.04865C38.0015 7.57625 41.321 6.8259 43.6839 5.4322C44.9352 4.69446 45.9568 3.81058 45.9073 2.55216C45.9033 2.45429 45.8038 2.42646 45.716 2.38644C45.58 2.32511 45.4244 2.2829 45.2585 2.24984C44.1361 2.02626 42.6284 2.24244 42.0113 2.37033C39.6077 2.86752 36.4104 4.94023 34.8234 7.25915C34.4881 7.74894 34.221 8.24788 34.0707 8.74289ZM71.1555 6.54622C72.2035 6.02032 73.3004 5.38436 74.1655 4.69229C74.6248 4.32473 75.0128 3.94674 75.258 3.55438C75.4632 3.22988 75.5434 2.89753 75.2982 2.57651C75.2001 2.44645 75.0529 2.44386 74.9013 2.46821C74.7408 2.49431 74.5758 2.54998 74.4108 2.62175C73.3227 3.08893 72.199 4.18031 71.8378 4.69229C71.4142 5.28605 71.2046 5.91418 71.1555 6.54622Z" fill="#200FE2"/>
                                         </svg>
                                         <!-- Form START -->
-                                        <div class="">
+                                        <form class="needs-validation" novalidate>
                                             <div class="row">
                                                 <div class="col">
                                                     <!-- First Name -->
                                                     <div class="input-floating-label form-floating mb-4">
-                                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                        <input type="text" class="form-control" id="floatingInput" placeholder="" required>
                                                         <label for="floatingInput">First Name</label>
+                                                        <div class="invalid-tooltip">
+                                                            Please enter your first name.
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <!-- Last Name -->
                                                     <div class="input-floating-label form-floating mb-4">
-                                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                        <input type="text" class="form-control" id="floatingInput" placeholder="" required>
                                                         <label for="floatingInput">Last Name</label>
                                                     </div>
                                                 </div>
@@ -161,14 +431,14 @@
                                                 <div class="col">
                                                     <!-- Email Address -->
                                                     <div class="input-floating-label form-floating mb-4">
-                                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                        <input type="email" class="form-control" id="floatingInput" placeholder="" required>
                                                         <label for="floatingInput">Email Address</label>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <!-- Phone Number -->
                                                     <div class="input-floating-label form-floating mb-4">
-                                                        <input type="phone" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                        <input type="phone" class="form-control" id="floatingInput" placeholder="" required>
                                                         <label for="floatingInput">Phone Number</label>
                                                     </div>
                                                 </div>
@@ -177,14 +447,14 @@
                                                 <div class="col">
                                                     <!-- Address 1 -->
                                                     <div class="input-floating-label form-floating mb-4">
-                                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                        <input type="text" class="form-control" id="floatingInput" placeholder="" required>
                                                         <label for="floatingInput">Address 1</label>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <!-- Address 1 -->
                                                     <div class="input-floating-label form-floating mb-4">
-                                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                        <input type="text" class="form-control" id="floatingInput" placeholder="" required>
                                                         <label for="floatingInput">Address 2</label>
                                                     </div>
                                                 </div>
@@ -193,21 +463,21 @@
                                                 <div class="col">
                                                     <!-- Postal Code -->
                                                     <div class="input-floating-label form-floating mb-4">
-                                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                        <input type="text" class="form-control" id="floatingInput" placeholder="" required>
                                                         <label for="floatingInput">Postal Code</label>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <!-- Country -->
                                                     <div class="input-floating-label form-floating mb-4">
-                                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                        <input type="text" class="form-control " id="floatingInput" placeholder="" no-validation>
                                                         <label for="floatingInput">Country</label>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <!-- State -->
                                                     <div class="input-floating-label form-floating mb-4">
-                                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                                        <input type="text" class="form-control" id="floatingInput" placeholder="" required>
                                                         <label for="floatingInput">State</label>
                                                     </div>
                                                 </div>
@@ -215,16 +485,16 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="d-grid">
-                                                        <button class="btn btn-dark mb-0" type="button">Create an account</button>
+                                                        <button class="btn btn-dark mb-0" type="submit">Create an account</button>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="d-grid">
-                                                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                                                        <button class="btn btn-outline-primary" type="reset">Cancel</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                         <!-- Form END -->
                 
                                         <!-- Sign IN link -->
@@ -242,9 +512,30 @@
             </div>
         </div>
     </div>
-    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+    <!-- **************** PROPERTY PARTNER REGISTRATION / LOGIN POPUP END   **************** -->
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+            }, false)
+        })
+        })()
+    </script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/theme.js"></script>
   </body>
