@@ -4,14 +4,17 @@
 
 @import 'base/typography';
 
+@import 'layout/layout';
 @import 'layout/header';
 @import 'layout/navigation';
 @import 'layout/footer';
 @import 'layout/hero_slider';
 @import 'layout/location_carousal';
 @import 'layout/service_card';
+@import 'layout/info';
+@import 'layout/property_list';
 
-
+@import 'components/alert';
 @import 'components/buttons';
 @import 'components/carousel';
 @import 'components/dropdown';

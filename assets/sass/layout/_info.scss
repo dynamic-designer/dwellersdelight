@@ -1,0 +1,50 @@
+.info-package {
+    height: 100%;
+    padding: 100px 80px;
+    .brand-headline {
+        @extend .text-primary--gradient;
+        font-size: 40px;
+        font-weight: $font-weight-bold;
+    }
+    .brand-check-list {
+        background: linear-gradient(to right, #d5d1ff, #ffffff);
+        border-radius: 10px;
+        padding: 1px;
+        .wrapper {
+            background: linear-gradient(to right, #f3f2ff, #ffffff);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: $font-weight-semibold;
+            padding: 15px 20px;
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+    .center-block {
+        margin: 40px 0;
+    }
+    &.info-package--colored {
+        background-image: url("../images/background-blured.png");
+        background-size: cover;
+        .brand-logo-white {
+            filter: brightness(50);
+        }
+        .brand-headline {
+            -webkit-text-fill-color: $color-white;
+        }
+        .brand-information {
+            color: $color-white;
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin: 0;
+        }
+    }
+    &.info-package--left {
+        border-bottom-left-radius: 40px;
+    }
+}

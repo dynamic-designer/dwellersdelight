@@ -1,0 +1,34 @@
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$base-font-family: "Inter", sans-serif;
+
+$base-font-size: 16px;
+
+$base-font-weight: 400;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+$font-weight-extralight: 200;
+
+
+$color-white: #fff;
+$primary-color: #200FE2;
+
+$base-border-color: #E4E5E8;
+
+$base-header-margin-bottom: 40px;
+
+$base-section-top-spacing: 50px;
+$base-section-bottom-spacing: 100px;
+
+$base-navlink-color: #62646A;
+$base-navlink-hover-background-color: rgba($color: $primary-color, $alpha: 0.05);
+$base-navlink-hover-color: #1a1a1a;

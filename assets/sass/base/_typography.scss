@@ -3,10 +3,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+h1, h2, h3, h4, h5, h6 {
+    line-height: normal;
+}
 h2 {
     margin-bottom: 40px;
 }
-
-section {
-    margin-top: 100px;
+h5, h6 {
+    font-family: "Inter", Helvetica, sans-serif;
 }

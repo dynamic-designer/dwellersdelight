@@ -1,5 +1,36 @@
-.navbar-nav {
-    li {
-        margin: 0 12px;
+header {
+    border-bottom: 1px solid $base-border-color;
+    .navbar-brand {
+        .navbar-brand-item {
+            height: 80px;
+        }
+    }
+    .navbar-nav {
+        .nav-item {
+            margin: 0 5px;
+            .nav-link {
+                border-radius: 10px;
+                color: $base-navlink-color;
+                padding:  8px 16px;
+                &:hover {
+                    background-color: $base-navlink-hover-background-color;
+                    color: $base-navlink-hover-color;
+                }
+            }
+            
+        }
+    }
+    .nav {
+        .nav-item {
+            .btn {
+                border-color: $primary-color;
+                border-width: 2px;
+                color: $primary-color;
+                font-weight: $font-weight-medium;
+                &:hover {
+                    background-color: rgba($color: $primary-color, $alpha: 0.1);
+                }
+            }
+        }
     }
 }

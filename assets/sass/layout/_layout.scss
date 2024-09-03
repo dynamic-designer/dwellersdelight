@@ -1,0 +1,11 @@
+body {
+    font-family: $base-font-family;
+    font-weight: $base-font-weight;
+}
+
+section {
+    margin: $base-section-top-spacing 0 $base-section-bottom-spacing 0;
+    &.bg-light-gradient {
+        background: linear-gradient(180deg, rgba(255, 246, 242, 1) 0%, rgb(255, 246, 242, 0) 100%);
+    }
+}

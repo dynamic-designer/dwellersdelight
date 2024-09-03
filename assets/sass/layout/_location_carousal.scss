@@ -1,6 +1,5 @@
 .location-package {
     border-radius: 8px;
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .13);
     padding: 12px 4px 4px;
     width: 130px;
     &--violet {
@@ -58,8 +57,32 @@
             }
             picture {
                 img {
-                    border-radius: 12px;
+                    border-radius: 16px;
                 }
+            }
+        }
+    }
+}
+
+.owl-slider-wrapper {
+    .owl-nav {
+        display: block !important;
+        button {
+            background-color: $color-white !important;
+            border-radius: 48px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+            position: absolute;
+            bottom: 60px;
+            height: 48px;
+            width: 48px;
+            span {
+                font-size: 24px;
+            }
+            &.owl-prev {
+                left: -24px;
+            }
+            &.owl-next {
+                right: -24px;
             }
         }
     }

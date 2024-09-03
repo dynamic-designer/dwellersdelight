@@ -1,0 +1,21 @@
+.alert-primary {
+    background-color: $primary-color;
+    color: $color-white;
+}
+
+.page-alert {
+    border: 0 none;
+    border-radius: 0;
+    padding: 9px 15px;
+    margin: 0;
+    .btn-outline-primary {
+        border-color: $color-white;
+        color: $color-white;
+        font-size: ($base-font-size - 2px);
+        padding: 6px 15px;
+        margin-left: 10px;
+        &:hover {
+            background-color: rgba($color: $color-white, $alpha: 0.2);
+        }
+    }
+}
