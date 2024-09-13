@@ -1,0 +1,58 @@
+.property-package {
+    .property-gallery {
+        .full-height,
+        .half-height {
+            background-size: cover;
+            background-position: center center;
+            border-radius: 16px;
+            display: block;
+        }
+        .full-height {
+            height: 400px;
+        }
+        .half-height {
+            height: calc(200px - 0.5rem);
+        }
+        .property-gallery--action {
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            a {
+                font-size: 18px;
+                text-decoration: none;
+            }
+        }
+    }
+    .property-details {
+        .navbar {
+            border-bottom: 1px solid $base-border-color;
+            border-top: 1px solid $base-border-color;
+            padding: 1rem;
+            .nav-pills {
+                .nav-item {
+                    .nav-link {
+                        border-radius: 6px;
+                        color: $primary-color;
+                        padding: 10px 16px;
+                        &.active {
+                            background-color: $primary-color;
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .booking-info {
+        .card {
+            background-color: rgba($color: $primary-color, $alpha: 0.05);
+            border-color: $primary-color;
+        }
+    }
+}

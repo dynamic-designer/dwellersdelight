@@ -35,11 +35,13 @@ body {
 section {
   margin: 50px 0 100px 0;
 }
-section.bg-light-gradient {
+
+.bg-light-gradient {
   background: linear-gradient(180deg, rgb(255, 246, 242) 0%, rgba(255, 246, 242, 0) 100%);
 }
 
 header {
+  background-color: #fff;
   border-bottom: 1px solid #E4E5E8;
 }
 header .navbar-brand .navbar-brand-item {
@@ -451,6 +453,53 @@ header .nav .nav-item .btn:hover {
   font-size: 36px;
 }
 
+.property-package .property-gallery .full-height,
+.property-package .property-gallery .half-height {
+  background-size: cover;
+  background-position: center center;
+  border-radius: 16px;
+  display: block;
+}
+.property-package .property-gallery .full-height {
+  height: 400px;
+}
+.property-package .property-gallery .half-height {
+  height: calc(200px - 0.5rem);
+}
+.property-package .property-gallery .property-gallery--action {
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.property-package .property-gallery .property-gallery--action a {
+  font-size: 18px;
+  text-decoration: none;
+}
+.property-package .property-details .navbar {
+  border-bottom: 1px solid #E4E5E8;
+  border-top: 1px solid #E4E5E8;
+  padding: 1rem;
+}
+.property-package .property-details .navbar .nav-pills .nav-item .nav-link {
+  border-radius: 6px;
+  color: #200FE2;
+  padding: 10px 16px;
+}
+.property-package .property-details .navbar .nav-pills .nav-item .nav-link.active {
+  background-color: #200FE2;
+  color: #fff;
+}
+.property-package .booking-info .card {
+  background-color: rgba(32, 15, 226, 0.05);
+  border-color: #200FE2;
+}
+
 .alert-primary {
   background-color: #200FE2;
   color: #fff;
@@ -479,4 +528,9 @@ header .nav .nav-item .btn:hover {
   background: rgb(37, 44, 90);
   background: linear-gradient(315deg, rgb(37, 44, 90) 0%, rgb(32, 15, 226) 100%);
   border: 0 none;
+}
+
+.breadcrumb {
+  background-color: rgba(32, 15, 226, 0.1);
+  padding: 16px 32px;
 }/*# sourceMappingURL=app.css.map */
