@@ -1,5 +1,6 @@
 .property-package {
     .property-gallery {
+        margin-bottom: 70px;
         .full-height,
         .half-height {
             background-size: cover;
@@ -13,46 +14,75 @@
         .half-height {
             height: calc(200px - 0.5rem);
         }
-        .property-gallery--action {
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            a {
-                font-size: 18px;
-                text-decoration: none;
-            }
-        }
     }
     .property-details {
-        .navbar {
-            border-bottom: 1px solid $base-border-color;
-            border-top: 1px solid $base-border-color;
-            padding: 1rem;
-            .nav-pills {
-                .nav-item {
-                    .nav-link {
-                        border-radius: 6px;
-                        color: $primary-color;
-                        padding: 10px 16px;
-                        &.active {
-                            background-color: $primary-color;
-                            color: $color-white;
+        .name {
+            font-family: "Inter", Helvetica, sans-serif;
+            margin-bottom: 30px;
+        }
+        .details {
+            margin-bottom: 50px;
+            .amenities {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 30px;
+                .box {
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 14px;
+                    padding: 10px;
+                    text-align: center;
+                    width: 90px;
+                    img {
+                        height: 32px;
+                        margin: 0 auto 10px;
+                    }
+                }
+            }
+            .view-more-less-btn {
+                background: linear-gradient(90deg, #f4f3fe, #d7d4fa);
+                border-radius: 20px;
+                color: $primary-color;
+                padding: 7px 14px;
+                text-decoration: none;
+                .see-more {
+                    display: none;
+                }
+                .see-less {
+                    display: inline;
+                }
+                .bi-chevron-down {
+                    &::before {
+                        transform: rotate(180deg);
+                    }
+                }
+                &.collapsed {
+                    .see-more {
+                        display: inline;
+                    }
+                    .see-less {
+                        display: none;
+                    }
+                    .bi-chevron-down {
+                        &::before {
+                            transform: rotate(0deg);
                         }
                     }
                 }
             }
-        }
-    }
-    .booking-info {
-        .card {
-            background-color: rgba($color: $primary-color, $alpha: 0.05);
-            border-color: $primary-color;
+            .amenities-group {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                .list-group-item {
+                    border: 0 none;
+                    flex: 0 0 auto;
+                    width: 33.33%;
+                    padding: 0 0 15px 0;
+                }
+            }
         }
     }
 }

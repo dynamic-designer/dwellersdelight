@@ -15,6 +15,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.text-primary {
+  color: #200FE2 !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: normal;
 }
@@ -376,7 +380,7 @@ header .nav .nav-item .btn:hover {
 .property-list-package .property-image {
   background-size: cover;
   background-position: center center;
-  height: 250px;
+  height: 300px;
 }
 .property-list-package .card {
   border: 0 none;
@@ -391,35 +395,44 @@ header .nav .nav-item .btn:hover {
   font-size: 22px;
   font-weight: bold;
   color: #000;
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .property-list-package .card .card-body .rating-star svg path {
   fill: #200FE2;
 }
-.property-list-package .card .card-body .location {
-  margin: 15px 0;
-}
-.property-list-package .card .card-body .location a {
-  color: #200FE2;
+.property-list-package .card .card-body .description {
   font-size: 14px;
-  text-decoration: none;
+  margin: 13px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-.property-list-package .card .card-body .location p {
-  font-size: 12px;
-  margin: 0;
+.property-list-package .card .card-body .amenities {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
-.property-list-package .card .card-body .offers {
-  margin: 0;
-}
-.property-list-package .card .card-body .offers li {
+.property-list-package .card .card-body .amenities .box {
+  border: 1px solid #e4e5e8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
   font-size: 14px;
-  margin-bottom: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 90px;
 }
-.property-list-package .card .card-body .offers li img {
-  margin-top: -2px;
+.property-list-package .card .card-body .amenities .box img {
+  height: 32px;
+  margin: 0 auto 10px;
 }
 .property-list-package .card .card-body .rating {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   text-align: right;
 }
@@ -428,31 +441,24 @@ header .nav .nav-item .btn:hover {
   flex-direction: column;
 }
 .property-list-package .card .card-body .rating .text span:first-child {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 200;
-}
-.property-list-package .card .card-body .rating .text span:last-child {
-  font-weight: bold;
 }
 .property-list-package .card .card-body .rating .digits {
-  background-color: rgba(32, 15, 226, 0.1);
+  margin-top: 10px;
+}
+.property-list-package .card .card-body .rating .digits span {
+  background-color: var(--bs-success-bg-subtle);
+  color: var(--bs-success-text-emphasis);
   border-radius: 10px;
-  color: #200FE2;
   font-size: 36px;
   font-weight: 200;
-  padding: 0 10px;
-  padding-top: 3px;
-  margin-left: 20px;
-}
-.property-list-package .card .card-body .price {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-}
-.property-list-package .card .card-body .price span:first-child {
-  font-size: 36px;
+  padding: 3px 10px;
 }
 
+.property-package .property-gallery {
+  margin-bottom: 70px;
+}
 .property-package .property-gallery .full-height,
 .property-package .property-gallery .half-height {
   background-size: cover;
@@ -466,38 +472,67 @@ header .nav .nav-item .btn:hover {
 .property-package .property-gallery .half-height {
   height: calc(200px - 0.5rem);
 }
-.property-package .property-gallery .property-gallery--action {
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+.property-package .property-details .name {
+  font-family: "Inter", Helvetica, sans-serif;
+  margin-bottom: 30px;
 }
-.property-package .property-gallery .property-gallery--action a {
-  font-size: 18px;
+.property-package .property-details .details {
+  margin-bottom: 50px;
+}
+.property-package .property-details .details .amenities {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.property-package .property-details .details .amenities .box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 90px;
+}
+.property-package .property-details .details .amenities .box img {
+  height: 32px;
+  margin: 0 auto 10px;
+}
+.property-package .property-details .details .view-more-less-btn {
+  background: linear-gradient(90deg, #f4f3fe, #d7d4fa);
+  border-radius: 20px;
+  color: #200FE2;
+  padding: 7px 14px;
   text-decoration: none;
 }
-.property-package .property-details .navbar {
-  border-bottom: 1px solid #E4E5E8;
-  border-top: 1px solid #E4E5E8;
-  padding: 1rem;
+.property-package .property-details .details .view-more-less-btn .see-more {
+  display: none;
 }
-.property-package .property-details .navbar .nav-pills .nav-item .nav-link {
-  border-radius: 6px;
-  color: #200FE2;
-  padding: 10px 16px;
+.property-package .property-details .details .view-more-less-btn .see-less {
+  display: inline;
 }
-.property-package .property-details .navbar .nav-pills .nav-item .nav-link.active {
-  background-color: #200FE2;
-  color: #fff;
+.property-package .property-details .details .view-more-less-btn .bi-chevron-down::before {
+  transform: rotate(180deg);
 }
-.property-package .booking-info .card {
-  background-color: rgba(32, 15, 226, 0.05);
-  border-color: #200FE2;
+.property-package .property-details .details .view-more-less-btn.collapsed .see-more {
+  display: inline;
+}
+.property-package .property-details .details .view-more-less-btn.collapsed .see-less {
+  display: none;
+}
+.property-package .property-details .details .view-more-less-btn.collapsed .bi-chevron-down::before {
+  transform: rotate(0deg);
+}
+.property-package .property-details .details .amenities-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.property-package .property-details .details .amenities-group .list-group-item {
+  border: 0 none;
+  flex: 0 0 auto;
+  width: 33.33%;
+  padding: 0 0 15px 0;
 }
 
 .alert-primary {
@@ -528,6 +563,10 @@ header .nav .nav-item .btn:hover {
   background: rgb(37, 44, 90);
   background: linear-gradient(315deg, rgb(37, 44, 90) 0%, rgb(32, 15, 226) 100%);
   border: 0 none;
+}
+
+.btn-lg {
+  font-size: 20px;
 }
 
 .breadcrumb {
