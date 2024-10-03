@@ -137,7 +137,9 @@
                             </p>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-primary--gradient btn-lg px-5 py-3">Inquire Now</button>
+                            <button type="button" class="btn btn-primary--gradient btn-lg px-5 py-3"
+                                data-bs-toggle="modal" data-bs-target="#modal-addEnquiryDetails">Inquire
+                                Now</button>
                         </div>
                     </div>
                     <div class="property-package">
@@ -184,7 +186,8 @@
                                     </div>
                                 </div>
                                 <div class="property-details">
-                                    <h3 class="name"><span class="text-primary--gradient">Property Information</span></h3>
+                                    <h3 class="name"><span class="text-primary--gradient">Property Information</span>
+                                    </h3>
                                     <div class="details">
                                         <!-- Highlights Icons -->
                                         <div class="amenities">
@@ -594,6 +597,169 @@
         </div>
     </div>
     <!-- **************** PROPERTY PARTNER REGISTRATION / LOGIN POPUP END   **************** -->
+
+    <div class="modal fade" id="modal-addEnquiryDetails" tabindex="-1" aria-labelledby="modal-addEnquiryDetailsLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content" id="addEnquiryDetails">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4 text-primary--gradient" id="exampleModalLabel">Enquiry Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                <form action="/Dwellers/ClientProperty/SaveEnquiryDetails" enctype="multipart/form-data"
+                    id="EnquiryDetails" method="post">
+                    <div class="modal-body">
+                        <div class="form-body">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label" for="BookingDateFrom">Booking Date From</label>
+                                    <input
+                                        class="form-control is-datepicker input-datepicker text-box single-line"
+                                        data-date-format="mm/dd/yyyy" data-val="true"
+                                        data-val-date="The field Booking Date From must be a date."
+                                        data-val-required="The Booking Date From field is required."
+                                        id="BookingDateFrom" name="BookingDateFrom" placeholder="" required=""
+                                        type="datetime" value="1/1/0001 12:00:00 AM">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="BookingDateTo">Booking Date To</label>
+                                    <input
+                                        class="form-control is-datepicker input-datepicker text-box single-line"
+                                        data-date-format="mm/dd/yyyy" data-val="true"
+                                        data-val-date="The field Booking Date To must be a date."
+                                        data-val-required="The Booking Date To field is required."
+                                        id="BookingDateTo" name="BookingDateTo" placeholder="" required=""
+                                        type="datetime" value="1/1/0001 12:00:00 AM">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="PropertyTypeID">Property Type</label>
+                                    <select class="form-select" data-val="true"
+                                        data-val-number="The field Property Type must be a number."
+                                        data-val-required="The Property Type field is required."
+                                        id="PropertyTypeID" name="PropertyTypeID">
+                                        <option value="">Select</option>
+                                        <option value="1">Test PropertyTypes</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="CountryID">Country</label>
+                                    <select class="form-select" data-val="true"
+                                        data-val-number="The field Country must be a number."
+                                        data-val-required="Country is Required" id="CountryID" name="CountryID"
+                                        onchange="OnCountryChange(this, '#StateID'); ">
+                                        <option value="">Select</option>
+                                        <option selected="selected" value="96">India</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="StateID">State</label>
+                                    <select class="form-select" data-val="true"
+                                        data-val-number="The field State must be a number." id="StateID"
+                                        name="StateID">
+                                        <option value="">Select</option>
+                                        <option selected="selected" value="1645">Gujarat</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="ZipCode">ZipCode</label>
+                                    <input class="form-control text-box single-line" id="ZipCode" name="ZipCode"
+                                        placeholder="" required="" type="text" value="390021">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="NoOfGuest">NoOfGuest</label>
+                                    <input class="form-control text-box single-line" data-val="true"
+                                        data-val-number="The field NoOfGuest must be a number."
+                                        data-val-required="The NoOfGuest field is required." id="NoOfGuest"
+                                        name="NoOfGuest" placeholder="" required="" type="number" value="0">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="Budget">Budget</label>
+                                    <input class="form-control text-box single-line" data-val="true"
+                                        data-val-number="The field Budget must be a number."
+                                        data-val-required="The Budget field is required." id="Budget"
+                                        name="Budget" placeholder="" required="" type="text" value="0.00">
+                                </div>
+                                <div class="col-md-12 col-12">
+                                    <label class="form-label" for="Requirements">Requirements</label>
+                                    <textarea class="form-control" cols="20" id="Requirements"
+                                        name="Requirements" placeholder="" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary--gradient py-2 px-3" onclick="saveEnquiryDetails();">Save
+                            changes</button>
+                    </div>
+                </form>
+                <script type="text/javascript">
+                    LoadStatesByCountryUrl = '/Dwellers/Utility/BindState';
+                    $('.input-datepicker').datepicker();
+
+                    function saveEnquiryDetails() {
+
+                        const forms = document.querySelectorAll('.needs-validation')
+
+                        // Loop over them and prevent submission
+                        Array.from(forms).forEach(form => {
+                            form.addEventListener('click', event => {
+                                if (!form.checkValidity()) {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                }
+
+                                form.classList.add('was-validated')
+                            }, false)
+                        })
+                        //validation
+
+                        $("#enquiryDetailserrorText").html('');
+                        $("#enquiryDetailssuccessText").html('');
+
+                        if ($("#EnquiryDetails").valid()) {
+                            var frmdata;
+                            frmdata = new FormData($("#EnquiryDetails")[0]);
+
+                            $.ajax({
+                                cache: false,
+                                type: "POST",
+                                enctype: 'multipart/form-data',
+                                processData: false,
+                                contentType: false,
+                                data: frmdata,
+                                url: '/Dwellers/ClientProperty/SaveEnquiryDetails',
+                                success: function (resp) {
+                                    infoMsg = resp.infoMessage;
+                                    if (resp.status == true) {
+                                        $('#enquiryDetailssuccessText').html(resp.errorMessage);
+                                        $('#enquiryDetailssuccessDiv').show();
+                                        $("#btnclose").click();
+                                        // window.location.href = '/Dwellers/ClientProperty/EnquiryList';
+                                    }
+                                    if (resp.status == false) {
+                                        $('#enquiryDetailssuccessText').html('');
+                                        $('#enquiryDetailssuccessDiv').hide();
+                                        $("#enquiryDetailserrorText").html(resp.errorMessage);
+                                        $("#enquiryDetailserrorDiv").show();
+                                        return false;
+                                    }
+                                },
+                                error: function (errMessage) {
+                                    if (errMessage != null && errMessage.length > 0) {
+                                        $("#enquiryDetailserrorText").html(errMessage);
+                                        $("#enquiryDetailserrorDiv").show();
+                                    }
+                                }
+                            });
+                        }
+                        else {
+                            return false;
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>

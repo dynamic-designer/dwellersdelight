@@ -1,6 +1,6 @@
-@media (min-width: 1400px) {
+@media (min-width: 1366px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 1320px;
+    max-width: 1300px;
   }
 }
 /* XXX-Large devices (larger desktops, 1600px and up) */
@@ -29,6 +29,10 @@ h2 {
 
 h5, h6 {
   font-family: "Inter", Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -117,14 +121,16 @@ header .nav .nav-item .btn:hover {
   border-radius: 16px;
   padding: 10px;
 }
-.hero-slider .content-wrapper .search-form .form-control {
+.hero-slider .content-wrapper .search-form .form-control,
+.hero-slider .content-wrapper .search-form .form-select {
   border: 0;
   height: 46px;
 }
-.hero-slider .content-wrapper .search-form .form-control::-moz-placeholder {
+.hero-slider .content-wrapper .search-form .form-control::-moz-placeholder, .hero-slider .content-wrapper .search-form .form-select::-moz-placeholder {
   color: #999;
 }
-.hero-slider .content-wrapper .search-form .form-control::placeholder {
+.hero-slider .content-wrapper .search-form .form-control::placeholder,
+.hero-slider .content-wrapper .search-form .form-select::placeholder {
   color: #999;
 }
 .hero-slider .content-wrapper .search-form .btn-search {
@@ -166,7 +172,8 @@ header .nav .nav-item .btn:hover {
   .hero-slider .content-wrapper .search-form {
     border-radius: 12px;
   }
-  .hero-slider .content-wrapper .search-form .form-control {
+  .hero-slider .content-wrapper .search-form .form-control,
+  .hero-slider .content-wrapper .search-form .form-select {
     height: 50px;
   }
   .hero-slider .partners-package .partners-logos {
@@ -190,7 +197,8 @@ header .nav .nav-item .btn:hover {
   .hero-slider .content-wrapper .search-form {
     border-radius: 16px;
   }
-  .hero-slider .content-wrapper .search-form .form-control {
+  .hero-slider .content-wrapper .search-form .form-control,
+  .hero-slider .content-wrapper .search-form .form-select {
     height: 60px;
   }
   .hero-slider .partners-package .partners-logos {
@@ -212,7 +220,8 @@ header .nav .nav-item .btn:hover {
 .hero-slider.hero-slider--small .content-wrapper .search-form {
   border-radius: 16px;
 }
-.hero-slider.hero-slider--small .content-wrapper .search-form .form-control {
+.hero-slider.hero-slider--small .content-wrapper .search-form .form-control,
+.hero-slider.hero-slider--small .content-wrapper .search-form .form-select {
   height: 60px;
 }
 
@@ -535,6 +544,122 @@ header .nav .nav-item .btn:hover {
   padding: 0 0 15px 0;
 }
 
+.profile-package .profileLeftSidebar-package .card {
+  padding: 1.5rem;
+  width: 100%;
+}
+.profile-package .profileLeftSidebar-package .card .card-header {
+  background-color: transparent;
+  border-bottom: 1px solid #E4E5E8;
+  text-align: center;
+  padding: 20px;
+}
+.profile-package .profileLeftSidebar-package .card .card-header .avatar {
+  display: inline-block;
+  height: 7rem;
+  width: 7rem;
+  position: relative;
+  margin-bottom: 20px;
+}
+.profile-package .profileLeftSidebar-package .card .card-header .avatar .avatar-img {
+  border-radius: 7rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.profile-package .profileLeftSidebar-package .card .card-header .avatar .btn {
+  background-color: #200FE2;
+  border-color: #200FE2;
+  border-radius: 5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.profile-package .profileLeftSidebar-package .card .card-header .name {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.profile-package .profileLeftSidebar-package .card .card-header .email {
+  color: #62646A;
+  font-size: 14px;
+  text-decoration: none;
+}
+.profile-package .profileLeftSidebar-package .card .card-body {
+  padding: 0;
+  margin-top: 1.5rem;
+}
+.profile-package .profileLeftSidebar-package .card .card-body .nav-pills-proileMenu .nav-item {
+  margin-bottom: 5px;
+  width: 100%;
+}
+.profile-package .profileLeftSidebar-package .card .card-body .nav-pills-proileMenu .nav-item .nav-link {
+  border-radius: 4px;
+  border-left: 2px solid transparent;
+  color: #000;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem !important;
+}
+.profile-package .profileLeftSidebar-package .card .card-body .nav-pills-proileMenu .nav-item .nav-link:hover, .profile-package .profileLeftSidebar-package .card .card-body .nav-pills-proileMenu .nav-item .nav-link.active {
+  color: #200FE2;
+  background-color: rgba(32, 15, 226, 0.1);
+  border-left: 2px solid #200FE2;
+}
+.profile-package .profileLeftSidebar-package .card .card-body .nav-pills-proileMenu .nav-item .nav-link.text-danger:hover {
+  background-color: #fff0f2;
+  border-color: #dc3545;
+}
+.profile-package .profileRightSideContent-package .page-heading {
+  font-family: "Inter", Helvetica, sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+}
+.profile-package .profileRightSideContent-package .card {
+  border: 0 none;
+}
+.profile-package .profileRightSideContent-package .card .card-header {
+  background-color: rgba(32, 15, 226, 0.05);
+  border: 1px solid #E4E5E8;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.profile-package .profileRightSideContent-package .card .card-header .card-title {
+  font-size: 20px;
+}
+.profile-package .profileRightSideContent-package .card .card-body {
+  padding: 0 !important;
+}
+.profile-package .profileRightSideContent-package .card .card-body .inqury-row {
+  border: 1px solid #E4E5E8;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.profile-package .profileRightSideContent-package .card .card-body .inqury-row .photo {
+  border-radius: 5px;
+  max-width: 100%;
+  min-height: 120px;
+}
+.profile-package .profileRightSideContent-package .card .card-body .inqury-row .name {
+  margin-bottom: 15px;
+}
+.profile-package .profileRightSideContent-package .card .card-body .inqury-row .name a {
+  color: #200FE2;
+  font-size: 20px;
+  text-decoration: none;
+}
+.profile-package .profileRightSideContent-package .card .card-body .inqury-row .type,
+.profile-package .profileRightSideContent-package .card .card-body .inqury-row .date,
+.profile-package .profileRightSideContent-package .card .card-body .inqury-row .location {
+  color: #62646A;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
 .alert-primary {
   background-color: #200FE2;
   color: #fff;
@@ -567,6 +692,29 @@ header .nav .nav-item .btn:hover {
 
 .btn-lg {
   font-size: 20px;
+}
+
+.form-label {
+  color: #666666;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.form-control,
+.form-select {
+  border-color: #ccc;
+  border-radius: 4px;
+}
+
+.modal-header {
+  background: #e8e7fc;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: #E4E5E8;
 }
 
 .breadcrumb {

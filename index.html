@@ -38,28 +38,6 @@
                 <!-- Main navbar START -->
                 <div class="navbar-collapse collapse" id="navbarCollapse">
                     <ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-auto-close="outside"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Demos</a>
-                            <div class="dropdown-menu dropdown-menu-size-lg p-3">
-                                <div class="row pt-2">
-                                    <!-- Index nav links -->
-                                    <div class="col-sm-12">
-                                        <ul class="list-unstyled">
-                                            <li> <a class="dropdown-item" href="index-saas.html">SaaS v.1</a> </li>
-                                            <li> <a class="dropdown-item" href="index-saas-v2.html">SaaS v.2</a> </li>
-                                            <li> <a class="dropdown-item" href="index-saas-v3.html">SaaS v.3</a> </li>
-                                            <li> <a class="dropdown-item" href="index-saas-v4.html">SaaS v.4</a> </li>
-                                            <li> <a class="dropdown-item" href="index-saas-v5.html">SaaS v.5</a> </li>
-                                            <li> <a class="dropdown-item" href="index-finance-consulting.html">Finance
-                                                    consulting<span class="badge text-bg-success ms-2">New</span></a>
-                                            </li>
-                                            <li> <a class="dropdown-item" href="index-shop.html">Index Shop</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
                         <!-- Nav item -->
                         <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">Locations</a> </li>
 
@@ -74,10 +52,6 @@
 
                         <!-- Nav item -->
                         <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">About Us</a> </li>
-
-                        <!-- Nav item -->
-                        <li class="nav-item"> <a class="nav-link" href="javascript:void(0);">Preferred Registration</a>
-                        </li>
                     </ul>
                 </div>
                 <!-- Main navbar END -->
@@ -86,7 +60,7 @@
                 <ul class="nav align-items-center dropdown-hover ms-sm-2">
 
                     <!-- Sign up button -->
-                    <li class="nav-item me-2 d-none d-sm-block">
+                    <li class="nav-item d-none d-sm-block">
                         <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
                             data-bs-target="#modal-propertyPartnersRegistration">Sign In</button>
                     </li>
@@ -128,12 +102,13 @@
                                                         placeholder="Search Location" aria-label="Search Location">
                                                 </div>
                                                 <div class="col">
-                                                    <input class="form-control" type="text" placeholder="Search City"
+                                                    <input class="form-select" type="text" placeholder="Search City"
                                                         aria-label="Search City">
                                                 </div>
                                                 <div class="col-md-auto">
                                                     <button type="button"
-                                                        class="btn btn-primary--gradient btn-search px-5 py-3">Search</button>
+                                                        class="btn btn-primary--gradient btn-search px-5 py-3"
+                                                        onclick="location.href = 'propertyList.html';">Search</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -397,15 +372,9 @@
                         <div class="row g-0">
                             <div class="col-lg-4 vh-100 d-none d-lg-block">
                                 <!-- Slider START -->
-                                <div class="swiper h-100" data-swiper-options='{
-                                    "autoplay": true,
-                                    "pagination":{
-                                        "el":".swiper-pagination",
-                                        "clickable":"true"
-                                    }}'>
-
+                                <div class="h-100">
                                     <!-- Slider items START -->
-                                    <div class="swiper-wrapper">
+                                    <div class="owl-carousel">
                                         <!-- Item -->
                                         <div class="swiper-slide">
                                             <div class="card rounded-0 h-100" data-bs-theme="dark"
@@ -528,9 +497,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- Slider Pagination -->
-                                    <div class="swiper-pagination swiper-pagination-line mb-3"></div>
                                 </div>
                             </div>
                             <div class="col-sm-10 col-lg-8 d-flex m-auto vh-100">
@@ -675,7 +641,6 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
