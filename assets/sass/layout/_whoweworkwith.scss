@@ -1,0 +1,23 @@
+.woWeWorkWith-package {
+    margin-top: 100px;
+    .woWeWorkWith-imgWrapper {
+        position: sticky;
+        top: 150px;
+        height: 500px;
+        .woWeWorkWith-img {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 32px;
+            height: 100%;
+        }
+    }
+    .woWeWorkWith-contentWrapper {
+        height: 500px;
+        padding: 0 50px;
+        h3 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+    }
+}
