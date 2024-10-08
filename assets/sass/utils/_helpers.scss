@@ -10,3 +10,12 @@
         max-width: 1530px;
     }
 }
+
+.py-100px {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.bg-DarkSlateBlue {
+    background-color: $primaryDark-color;
+    color: $color-white;
+}

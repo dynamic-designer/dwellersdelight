@@ -15,6 +15,10 @@
     .woWeWorkWith-contentWrapper {
         height: 500px;
         padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         h3 {
             font-size: 36px;
             margin-bottom: 30px;

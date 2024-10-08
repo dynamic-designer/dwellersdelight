@@ -9,6 +9,16 @@
     max-width: 1530px;
   }
 }
+.py-100px {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.bg-DarkSlateBlue {
+  background-color: #252C5A;
+  color: #fff;
+}
+
 .text-primary--gradient, .info-package .brand-headline {
   background: linear-gradient(135deg, rgb(32, 15, 226) 0%, rgb(37, 44, 90) 100%);
   -webkit-background-clip: text;
@@ -17,6 +27,10 @@
 
 .text-primary {
   color: #200FE2 !important;
+}
+
+.text-secondary {
+  color: #D8AA96 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,6 +89,37 @@ header .nav .nav-item .btn {
 }
 header .nav .nav-item .btn:hover {
   background-color: rgba(32, 15, 226, 0.1);
+}
+
+footer {
+  background-color: #202124;
+  color: #c4c5c7;
+  padding-top: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+footer .background-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -8rem;
+  margin-left: -11rem;
+}
+footer .background-figure svg.fill-mode {
+  fill: #fff;
+}
+footer .invert-logo {
+  filter: brightness(999);
+}
+footer h6 {
+  color: #fff;
+  font-size: 1.2rem;
+}
+footer .nav.flex-column:not(.nav-pills) .nav-link {
+  color: #c5c6cc;
+  font-size: 14px;
+  padding-left: 0;
+  padding-bottom: 0.3rem;
 }
 
 .hero-slider {
@@ -228,7 +273,7 @@ header .nav .nav-item .btn:hover {
   font-size: 48px;
 }
 .hero-slider.hero-slider--small .content-wrapper h1.font-xl {
-  font-size: 64px;
+  font-size: 60px;
 }
 .hero-slider.hero-slider--small .content-wrapper .search-form {
   border-radius: 16px;
@@ -673,6 +718,104 @@ header .nav .nav-item .btn:hover {
   margin-bottom: 5px;
 }
 
+.companyPath-package .companyPath-contentWrapper h3 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.companyPath-package .sticky-top-leftWrapper {
+  position: sticky;
+  top: 200px;
+}
+
+.companyPath-founderWrapper .avatar {
+  height: 86px;
+  width: 86px;
+  margin-right: 25px;
+}
+.companyPath-founderWrapper .title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.companyPath-founderWrapper .testimonital {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 24px;
+}
+
+.companyPath-pathWrapper ul {
+  padding: 0;
+}
+.companyPath-pathWrapper ul li {
+  list-style-type: none;
+}
+.companyPath-pathWrapper .companyPath-list .companyPath-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+.companyPath-pathWrapper .companyPath-list .companyPath-item .year {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 700;
+  position: absolute;
+  transform: rotate(-90deg);
+  top: calc(50% - 36px);
+  left: -30px;
+  width: 150px;
+}
+.companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border {
+  background: linear-gradient(to right, #B0B8EC, rgba(213, 209, 255, 0));
+  border-radius: 10px;
+  margin-left: 72px;
+  padding: 3px;
+}
+.companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper {
+  background: linear-gradient(to right, #5C6499, rgba(37, 44, 90, 0));
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  min-height: 200px;
+  padding: 30px;
+}
+.companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper li:last-child {
+  margin-bottom: 0;
+}
+.companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper li .bullet {
+  margin-right: 15px;
+}
+.companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper li span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.informationBanner-package {
+  background: url("../images/about/15.jpg");
+  border-radius: 32px;
+  padding: 100px;
+}
+.informationBanner-package .innerBox {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 50px;
+}
+.informationBanner-package .innerBox h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.informationBanner-package .innerBox p {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
 .woWeWorkWith-package {
   margin-top: 100px;
 }
@@ -691,6 +834,10 @@ header .nav .nav-item .btn:hover {
 .woWeWorkWith-package .woWeWorkWith-contentWrapper {
   height: 500px;
   padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .woWeWorkWith-package .woWeWorkWith-contentWrapper h3 {
   font-size: 36px;
