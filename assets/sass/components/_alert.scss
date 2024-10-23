@@ -6,16 +6,21 @@
 .page-alert {
     border: 0 none;
     border-radius: 0;
-    padding: 9px 15px;
+    padding: 8px 16px;
     margin: 0;
     .btn-outline-primary {
         border-color: $color-white;
         color: $color-white;
         font-size: ($base-font-size - 2px);
-        padding: 6px 15px;
-        margin-left: 10px;
+        padding: 8px 16px;
+        margin-left: 12px;
         &:hover {
             background-color: rgba($color: $color-white, $alpha: 0.2);
+        }
+    }
+    @media (min-width: 1366px) and (max-width: 1600px) {
+        .btn-outline-primary {
+            padding: 4px 8px;
         }
     }
 }

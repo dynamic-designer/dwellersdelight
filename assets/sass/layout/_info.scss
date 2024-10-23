@@ -1,36 +1,36 @@
 .info-package {
     height: 100%;
-    padding: 100px 80px;
+    padding: 72px;
     .brand-headline {
         @extend .text-primary--gradient;
-        font-size: 40px;
+        font-size: 36px;
         font-weight: $font-weight-bold;
     }
     .brand-check-list {
-        background: linear-gradient(to right, #d5d1ff, #ffffff);
-        border-radius: 10px;
+        background: linear-gradient(to right, #d5d1ff, $color-white);
+        border-radius: 12px;
         padding: 1px;
         .wrapper {
-            background: linear-gradient(to right, #f3f2ff, #ffffff);
-            border-radius: 10px;
+            background: linear-gradient(to right, #f3f2ff, $color-white);
+            border-radius: 12px;
             display: flex;
             align-items: center;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: $font-weight-semibold;
-            padding: 15px 20px;
+            padding: 16px 24px;
             img {
-                margin-right: 15px;
+                margin-right: 16px;
             }
         }
     }
     .center-block {
-        margin: 40px 0;
+        margin: 36px 0;
     }
     &.info-package--colored {
         background-image: url("../images/background-blured.png");
         background-size: cover;
         .brand-logo-white {
-            filter: brightness(50);
+            filter: brightness(48);
         }
         .brand-headline {
             -webkit-text-fill-color: $color-white;
@@ -38,13 +38,36 @@
         .brand-information {
             color: $color-white;
             display: -webkit-box;
-            -webkit-line-clamp: 7;
+            -webkit-line-clamp: 8;
             -webkit-box-orient: vertical;
             overflow: hidden;
             margin: 0;
         }
     }
     &.info-package--left {
-        border-bottom-left-radius: 40px;
+        border-bottom-left-radius: 36px;
+    }
+    @media (min-width: 1366px) and (max-width: 1600px) {
+        padding: 60px;
+        .brand-check-list {
+            border-radius: 8px;
+            .wrapper {
+                border-radius: 8px;
+                font-size: 16px;
+                padding: 12px;
+                img {
+                    margin-right: 12px;
+                    width: 24px;
+                }
+            }
+        }
+        .center-block {
+            margin: 32px 0;
+        }
+        &.info-package--colored {
+            .brand-information {
+                -webkit-line-clamp: 6;
+            }
+        }
     }
 }

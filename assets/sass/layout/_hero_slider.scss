@@ -7,8 +7,9 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 36px 24px;
     position: relative;
+    height: 600px;
     &::after {
         content: "";
         border-radius: var(--bs-border-radius-xxl);
@@ -22,31 +23,34 @@
     .content-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 36px;
         width: 100%;
+        max-width: 90%;
         position: relative;
         z-index: 1;
         h1 {
-            color: #fff;
-            font-family: 'Canela';
+            color: $color-white;
             text-align: center;
-            font-size: 30px;
         }
         .search-form {
             background-color: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
             border-radius: 16px;
-            padding: 10px;
+            padding: 12px;
             .form-control,
             .form-select {
                 border: 0;
-                height: 46px;
+                height: 60px;
+                border-radius: 8px;
                 &::placeholder {
                     color: #999;
                 }
             }
             .btn-search {
+                border-radius: 8px;
                 font-size: 20px;
+                height: 60px;
+                padding: 0 48px;
             }
         }
     }
@@ -58,69 +62,10 @@
             align-items: center;
             display: flex;
             justify-content: center;
-            gap: 50px;
-            margin-bottom: 2rem;
+            gap: 48px;
+            margin-bottom: 28px;
             img {
-                max-height: 40px;
-            }
-        }
-    }
-    @media (min-width: 992px) {
-        .content-wrapper {
-            gap: 40px;
-            max-width: 90%;
-            padding: 0;
-            margin-bottom: 5rem;
-        }
-    }
-    @media (min-width: 1200px) {
-        height: 500px;
-        .content-wrapper {
-            max-width: 90%;
-            h1 {
-                font-size: 48px;
-            }
-            .search-form {
-                border-radius: 12px;
-                .form-control,
-                .form-select {
-                    height: 50px;
-                }
-            }
-        }
-        .partners-package {
-            .partners-logos {
-                gap: 30px;
-                margin-bottom: 2rem;
-                img {
-                    max-height: 28px;
-                }
-            }
-        }
-    }
-    
-    /* XX-Large devices (larger desktops, 1400px and up) */
-    @media (min-width: 1400px) {
-        height: 600px;
-        .content-wrapper {
-            max-width: 80%;
-            h1 {
-                font-size: 64px;
-            }
-            .search-form {
-                border-radius: 16px;
-                .form-control,
-                .form-select {
-                    height: 60px;
-                }
-            }
-        }
-        .partners-package {
-            .partners-logos {
-                gap: 50px;
-                img {
-                    max-height: 40px;
-                }
+                max-height: 36px;
             }
         }
     }
@@ -133,7 +78,7 @@
             }
             span {
                 color: $color-white;
-                font-size: 20px;
+                font-size: 22px;
                 font-weight: $font-weight-semibold;
                 text-align: center;
                 text-transform: uppercase;
@@ -149,6 +94,28 @@
                 .form-control,
                 .form-select {
                     height: 60px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1366px) and (max-width: 1600px) {
+        height: 500px;
+        .content-wrapper {
+            .search-form {
+                border-radius: 12px;
+                .form-control,
+                .form-select,
+                .btn-search {
+                    height: 52px;
+                    border-radius: 6px;
+                    font-size: 16px;
+                }
+            }
+        }
+        .partners-package {
+            .partners-logos {
+                img {
+                    max-height: 30px;
                 }
             }
         }

@@ -3,17 +3,29 @@
     h6 {
         font-family: "Inter", Helvetica, sans-serif;
     }
-    @media (min-width: 992px) {
+    .icon {
+        margin-bottom: 24px;
+        img {
+            width: 48px;
+            height: 48px;
+        }
+    }
+    h6 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    p {
+        color: #74767E;
+        line-height: normal;
+    }
+    @media (min-width: 1366px) and (max-width: 1600px) {
+        margin-top: 24px;
         .icon {
-            margin-bottom: 32px;
-        }
-        h6 {
-            font-size: 24px;
-            margin-bottom: 16px;
-        }
-        p {
-            color: #74767E;
-            line-height: normal;
+            margin-bottom: 14px;
+            img {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 }
