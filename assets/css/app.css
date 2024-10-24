@@ -101,6 +101,11 @@ a {
 section {
   margin: 50px 0 100px 0;
 }
+@media (min-width: 1366px) and (max-width: 1600px) {
+  section {
+    margin: 30px 0 60px 0;
+  }
+}
 
 .bg-light-gradient {
   background: linear-gradient(180deg, rgb(255, 246, 242) 0%, rgba(255, 246, 242, 0) 100%);
@@ -251,17 +256,12 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
   gap: 0;
 }
 .hero-slider.hero-slider--small .content-wrapper span {
+  display: block;
   color: #fff;
   font-size: 22px;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-}
-.hero-slider.hero-slider--small .content-wrapper h1 {
-  font-size: 48px;
-}
-.hero-slider.hero-slider--small .content-wrapper h1.font-xl {
-  font-size: 60px;
 }
 .hero-slider.hero-slider--small .content-wrapper .search-form {
   border-radius: 16px;
@@ -573,6 +573,11 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
   padding: 3px 10px;
 }
 
+.sticky-map {
+  position: sticky;
+  top: 135px;
+}
+
 .property-package .property-gallery {
   margin-bottom: 70px;
 }
@@ -780,11 +785,11 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
 .companyPath-founderWrapper .avatar {
   height: 86px;
   width: 86px;
-  margin-right: 25px;
+  margin-right: 24px;
 }
 .companyPath-founderWrapper .title {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 .companyPath-founderWrapper .testimonital {
@@ -792,6 +797,20 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
   font-weight: 500;
   line-height: normal;
   margin-top: 24px;
+}
+@media (min-width: 1366px) and (max-width: 1600px) {
+  .companyPath-founderWrapper .avatar {
+    height: 72px;
+    width: 72px;
+    margin-right: 20px;
+  }
+  .companyPath-founderWrapper .title {
+    margin-bottom: 0;
+  }
+  .companyPath-founderWrapper .testimonital {
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 .companyPath-pathWrapper ul {
@@ -827,6 +846,7 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
   align-items: center;
   min-height: 200px;
   padding: 30px;
+  padding-right: 0;
 }
 .companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper li {
   display: flex;
@@ -842,6 +862,26 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
 .companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper li span {
   font-size: 20px;
   font-weight: 400;
+}
+@media (min-width: 1366px) and (max-width: 1600px) {
+  .companyPath-pathWrapper .companyPath-list .companyPath-item .year {
+    font-size: 56px;
+    left: -16px;
+    width: 130px;
+  }
+  .companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper {
+    padding: 24px;
+    min-height: 180px;
+  }
+  .companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper li {
+    margin-bottom: 16px;
+  }
+  .companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper li .bullet {
+    width: 24px;
+  }
+  .companyPath-pathWrapper .companyPath-list .companyPath-item .pathDetail-border .path-detail-wrapper li span {
+    font-size: 18px;
+  }
 }
 
 .informationBanner-package {
@@ -865,6 +905,14 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
   font-weight: 600;
   margin-bottom: 50px;
 }
+@media (min-width: 1366px) and (max-width: 1600px) {
+  .informationBanner-package {
+    padding: 80px;
+  }
+  .informationBanner-package .innerBox p {
+    font-size: 18px;
+  }
+}
 
 .woWeWorkWith-package {
   margin-top: 100px;
@@ -872,7 +920,7 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
 .woWeWorkWith-package .woWeWorkWith-imgWrapper {
   position: sticky;
   top: 150px;
-  height: 500px;
+  height: calc(100vh - 200px);
 }
 .woWeWorkWith-package .woWeWorkWith-imgWrapper .woWeWorkWith-img {
   background-position: center center;
@@ -882,7 +930,7 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
   height: 100%;
 }
 .woWeWorkWith-package .woWeWorkWith-contentWrapper {
-  height: 500px;
+  height: calc(100vh - 200px);
   padding: 0 50px;
   display: flex;
   flex-direction: column;
@@ -892,6 +940,18 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
 .woWeWorkWith-package .woWeWorkWith-contentWrapper h3 {
   font-size: 36px;
   margin-bottom: 30px;
+}
+@media (min-width: 1366px) and (max-width: 1600px) {
+  .woWeWorkWith-package {
+    margin-top: 72px;
+  }
+  .woWeWorkWith-package .woWeWorkWith-contentWrapper {
+    padding: 0 40px;
+  }
+  .woWeWorkWith-package .woWeWorkWith-contentWrapper h3 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
 }
 
 .alert-primary {

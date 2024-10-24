@@ -77,17 +77,12 @@
                 gap: 0;
             }
             span {
+                display: block;
                 color: $color-white;
                 font-size: 22px;
                 font-weight: $font-weight-semibold;
                 text-align: center;
                 text-transform: uppercase;
-            }
-            h1 {
-                font-size: 48px;
-                &.font-xl {
-                    font-size: 60px;
-                }
             }
             .search-form {
                 border-radius: 16px;
