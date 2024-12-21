@@ -19,6 +19,10 @@
   color: #fff;
 }
 
+.min-height-md {
+  min-height: 50vh;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1019,4 +1023,13 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
 .breadcrumb {
   background-color: rgba(32, 15, 226, 0.1);
   padding: 16px 32px;
+}
+
+.list-group-borderless .list-group-item {
+  border: none !important;
+  padding: 0.425rem 0;
+}
+.list-group-borderless a.list-group-item:hover {
+  background-color: transparent;
+  color: var(--bs-primary);
 }/*# sourceMappingURL=app.css.map */

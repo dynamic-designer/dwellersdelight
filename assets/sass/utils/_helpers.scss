@@ -21,3 +21,6 @@
     background-color: $primaryDark-color;
     color: $color-white;
 }
+.min-height-md {
+    min-height: calc(100vh / 2);
+}
