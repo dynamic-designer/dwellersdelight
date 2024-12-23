@@ -24,3 +24,9 @@
 .min-height-md {
     min-height: calc(100vh / 2);
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: linear-gradient(315deg, rgb(37, 44, 90) 0%, rgb(32, 15, 226) 100%);
+}
+.nav-pills .nav-link {
+    color: #200FE2;
+}

@@ -23,6 +23,14 @@
   min-height: 50vh;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background: linear-gradient(315deg, rgb(37, 44, 90) 0%, rgb(32, 15, 226) 100%);
+}
+
+.nav-pills .nav-link {
+  color: #200FE2;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;

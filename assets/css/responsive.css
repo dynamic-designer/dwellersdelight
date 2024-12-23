@@ -1,0 +1,65 @@
+
+@media (max-width:1350px) {
+    /* HERO-SLIDER */
+    .content-wrapper h1,h2{
+        font-size: 60px;
+    }
+
+    /* PARTNERS-IMG */
+    .partners-package img{
+        width: 7.5vw;
+    }
+}
+@media (max-width:990px){
+    /* Hero-Slider */
+    .content-wrapper h1,h2{
+        font-size: 50px;
+    }
+
+    /* PARTNER-LOGO */
+    .partners-package img{
+        width: 5.5vw;
+    }
+    .search-form{
+        margin-bottom: 40px;
+    }
+
+    /* INFO */
+    .info-package.info-package--left,.info-package{
+        padding: 30px;
+    }
+    
+}
+ 
+
+/* Medium Screen Responsive */
+@media (max-width:770px) and (min-width:450px){
+    /* Hero-Slider */
+    .content-wrapper h1,h2{
+        font-size: 35px;
+    }
+    #hero-slider-span{
+        font-size: 17px;
+    }
+}
+
+/* Small Screen Responsive  */
+@media (max-width:449px) and (min-width:260px) {
+    /* HERO-SLIDER */
+    #hero-slider-span{
+        font-size: 14px;
+    }
+    .content-wrapper h1,h2{
+        font-size: 25px;
+    }
+
+    /* INFO BRAND-HEADLINE */
+    .info-package .brand-headline {
+        font-size: 25px;
+    }
+
+    /* Footer SVG*/
+    .info-package.info-package--left,.info-package,.background-figure{
+        padding: 20px;
+    }
+}
