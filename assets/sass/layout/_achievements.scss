@@ -1,0 +1,29 @@
+.achievements-package {
+    display: flex;
+    justify-content: center;
+    .achievements-card {
+        border: 1px solid #EED9C4;
+        border-radius: 8px;
+        font-family: "Canela";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 160px;
+        height: 160px;
+        margin: 0 15px 30px 15px;
+        padding: 20px;
+        line-height: 1.3;
+        .state {
+            font-size: 36px;
+            color: #D8AA96;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 24px;
+            color: #1A1A1A;
+        }
+        .info {
+            font-family: $base-font-family;
+        }
+    }
+}

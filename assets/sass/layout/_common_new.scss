@@ -1,0 +1,33 @@
+.step-process {
+    > * {
+        position: relative;
+        &::before {
+            content: "";
+            border: 1px dashed #aaa;
+            width: 100%;
+            position: absolute;
+            top: 44px;
+            transform: translateX(50%);
+            z-index: -1;
+            display: none;
+        }
+    }
+    .card {
+        border: 0 none;
+        .icon-lg {
+            width: 3.5rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        h5 {
+            font-size: 24px;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .step-process > *:not(:last-child):before {
+        display: block;
+    }
+}

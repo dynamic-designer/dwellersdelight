@@ -40,6 +40,9 @@ h6, .h6 {font-size: 18px;}
 
 a {text-decoration: none;}
 
+.text-sansserif {
+    font-family: $base-font-family;
+}
 
 .text-primary--gradient {
     background: linear-gradient(135deg, rgba(32,15,226,1) 0%, rgba(37,44,90,1) 100%);
