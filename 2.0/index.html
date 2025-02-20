@@ -1,532 +1,732 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
 
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
-    
-    <!-- SEO meta tags -->
-    <title>Dwellers Delight</title>
+<head>
+  <meta charset="utf-8">
 
-    <!-- Webmanifest + Favicon / App icons -->
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+  <!-- Viewport -->
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
-    <!-- Import Google font (Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- SEO meta tags -->
+  <title>Dwellers Delight</title>
 
-    <!-- Vendor styles -->
-    <link rel="stylesheet" media="screen" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" media="screen" href="assets/css/lightgallery-bundle.min.css">
+  <!-- Webmanifest + Favicon / App icons -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
 
-    <!-- Font icons -->
-    <link rel="stylesheet" media="screen" href="assets/css/around-icons.min.css">
+  <!-- Import Google font (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <!-- Theme styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  <!-- Vendor styles -->
+  <link rel="stylesheet" media="screen" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" media="screen" href="assets/css/lightgallery-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Customizer generated styles -->
-    <style id="customizer-styles"></style>
+  <!-- Font icons -->
+  <link rel="stylesheet" media="screen" href="assets/css/around-icons.min.css">
 
-    <!-- Page loading styles -->
-    <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
+  <!-- Theme styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+  <!-- Customizer generated styles -->
+  <style id="customizer-styles"></style>
+
+  <!-- Page loading styles -->
+  <style>
+    .page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    [data-bs-theme="dark"] .page-loading {
+      background-color: #121519;
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1;
+    }
+
+    .page-loading-inner>span {
+      display: block;
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #6f788b;
+    }
+
+    [data-bs-theme="dark"] .page-loading-inner>span {
+      color: #fff;
+      opacity: .6;
+    }
+
+    .page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      background-color: #d7dde2;
+      border-radius: 50%;
+      opacity: 0;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+
+    [data-bs-theme="dark"] .page-spinner {
+      background-color: rgba(255, 255, 255, .25);
+    }
+
+    @-webkit-keyframes spinner {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
       }
-      [data-bs-theme="dark"] .page-loading {
-        background-color: #121519;
-      }
-      .page-loading.active {
+
+      50% {
         opacity: 1;
-        visibility: visible;
+        -webkit-transform: none;
+        transform: none;
       }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
+    }
+
+    @keyframes spinner {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
       }
-      .page-loading.active > .page-loading-inner {
+
+      50% {
         opacity: 1;
+        -webkit-transform: none;
+        transform: none;
       }
-      .page-loading-inner > span {
-        display: block;
-        font-family: "Inter", sans-serif;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #6f788b;
-      }
-      [data-bs-theme="dark"] .page-loading-inner > span {
-        color: #fff;
-        opacity: .6;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        background-color: #d7dde2; 
-        border-radius: 50%;
-        opacity: 0;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      [data-bs-theme="dark"] .page-spinner {
-        background-color: rgba(255,255,255,.25);
-      }
-      @-webkit-keyframes spinner {
-        0% {
-          -webkit-transform: scale(0);
-          transform: scale(0);
-        }
-        50% {
-          opacity: 1;
-          -webkit-transform: none;
-          transform: none;
-        }
-      }
-      @keyframes spinner {
-        0% {
-          -webkit-transform: scale(0);
-          transform: scale(0);
-        }
-        50% {
-          opacity: 1;
-          -webkit-transform: none;
-          transform: none;
-        }
-      }
-    </style>
+    }
 
-    <!-- Page loading scripts -->
-    <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading')
-          preloader.classList.remove('active')
-          setTimeout(function () {
-            preloader.remove()
-          }, 1500)
-        }
-      })()
-    </script>
-  </head>
+    body {
+      font-size: 14px;
+    }
+    .color-primary {
+      color: rgb(37, 44, 90) !important;
+    }
+    .nav-link {
+      color: rgb(37, 44, 90);
+    }
+    .navbar {
+      background: linear-gradient(white, white, transparent);
+    }
+    .hero-slider-bg {
+      background-size: 100% auto;
+      background-position: bottom !important;
+    }
+    footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+footer .background-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -120px;
+  margin-left: -180px;
+}
+footer .background-figure svg.fill-mode {
+  fill: #fff;
+}
+footer .invert-logo {
+  filter: brightness(999);
+}
+footer h6 {
+  color: #fff;
+}
+footer .nav.flex-column:not(.nav-pills) .nav-link {
+  color: #fff;
+  padding-left: 0;
+  padding-bottom: 0.3rem;
+}
+.f-link-heading {
+  padding: 3px 8px 1px;
+  border-radius: 5px;
+  background-color: white;
+  color: #000;
+  display: inline-block;
+}
+  </style>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading')
+        preloader.classList.remove('active')
+        setTimeout(function () {
+          preloader.remove()
+        }, 1500)
+      }
+    })()
+  </script>
+</head>
 
 
-  <!-- Body -->
-  <body>
+<!-- Body -->
 
-    <!-- Page loading spinner -->
-    <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner"></div>
-        <span>Loading...</span>
-      </div>
+<body>
+
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div>
+      <span>Loading...</span>
     </div>
+  </div>
 
-    <!-- Page wrapper -->
-    <main class="page-wrapper">
-    
-      <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
-      <header class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+  <!-- Page wrapper -->
+  <main class="page-wrapper">
 
-          <!-- Navbar brand (Logo) -->
-          <a class="navbar-brand pe-sm-3" href="index.html">
-            <img src="assets/img/logo.png" alt="" height="100" style="height: 100px;" />
-          </a>
+    <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
+    <header class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
 
-          <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none" href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank" rel="noopener">
-            <i class="ai-cart fs-xl me-2 ms-n1"></i>
-            Buy now
-          </a>
+        <!-- Navbar brand (Logo) -->
+        <a class="navbar-brand p-0" href="index.html">
+          <img src="assets/img/logo.png" alt="" height="100" style="height: 70px;" />
+        </a>
 
-          <!-- Mobile menu toggler (Hamburger) -->
-          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none"
+          href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank"
+          rel="noopener">
+          <i class="ai-cart fs-xl me-2 ms-n1"></i>
+          Buy now
+        </a>
 
-          <!-- Navbar collapse (Main navigation) -->
-          <nav class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--dw-scroll-height: 520px;">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Locations</a>
-                <ul class="dropdown-menu">
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">London</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Belvedere</a></li>
-                          <li><a class="dropdown-item" href="#">West London</a></li>
-                          <li><a class="dropdown-item" href="#">Camden town</a></li>
-                          <li><a class="dropdown-item" href="#">Hendon</a></li>
-                          <li><a class="dropdown-item" href="#">Kensington</a></li>
-                          <li><a class="dropdown-item" href="#">Chingford</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Scotland</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Aberdeen</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Greater London</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Brentford</a></li>
-                          <li><a class="dropdown-item" href="#">Hounslow</a></li>
-                          <li><a class="dropdown-item" href="#">Croydon</a></li>
-                          <li><a class="dropdown-item" href="#">Greenford</a></li>
-                          <li><a class="dropdown-item" href="#">Kingston upon Thames</a></li>
-                          <li><a class="dropdown-item" href="#">Harrow</a></li>
-                          <li><a class="dropdown-item" href="#">North Finchley</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Birmingham</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">City Center</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">East London</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Canary Wharf</a></li>
-                          <li><a class="dropdown-item" href="#">Chigwell</a></li>
-                          <li><a class="dropdown-item" href="#">Dagehnam</a></li>
-                          <li><a class="dropdown-item" href="#">Hainult</a></li>
-                          <li><a class="dropdown-item" href="#">Chadwell Heath</a></li>
-                          <li><a class="dropdown-item" href="#">Romford</a></li>
-                          <li><a class="dropdown-item" href="#">Woodford</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Leeds</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">City Center</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Manchester</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Stretford</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Plymouth</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Mutley</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Reading</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">East Reading</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Salisbury</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Windsor Street</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Southampton</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Back of the Walls</a></li>
-                          <li><a class="dropdown-item" href="#">Woolston</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Surrey</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Staines</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Swindon</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">City Center</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Leamington Spa</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">City Center</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Warwick</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Heathcote</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Netherlands</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Amsterdam</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Essex</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Basildon</a></li>
-                          <li><a class="dropdown-item" href="#">Chafford Hundred</a></li>
-                          <li><a class="dropdown-item" href="#">Loughton</a></li>
-                          <li><a class="dropdown-item" href="#">Chelmsford</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Hertfordshire</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Stevenage</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Kent</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Belvedere</a></li>
-                        </ul>
-                    </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Partnerships</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Client</a></li>
-                    <li><a class="dropdown-item" href="#">Accommodation Partner</a></li>
-                    <li><a class="dropdown-item" href="#">Landlord</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Solutions</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Technology</a></li>
-                    <li><a class="dropdown-item" href="#">Booking Platform</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">About Us</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Services</a></li>
-                    <li><a class="dropdown-item" href="#">Our Brand</a></li>
-                    <li><a class="dropdown-item" href="#">Sustainability</a></li>
-                    <li><a class="dropdown-item" href="#">Contact Us</a></li>
-                    <li><a class="dropdown-item" href="#">Blog</a></li>
-                </ul>
-              </li>
-            </ul>
-            <div class="d-none p-3 mt-n3">
-              <a class="btn btn-primary w-100 mb-1" href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank" rel="noopener">
-                <i class="ai-cart fs-xl me-2 ms-n1"></i>
-                Buy now
-              </a>
+        <!-- Mobile menu toggler (Hamburger) -->
+        <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar collapse (Main navigation) -->
+        <nav class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--dw-scroll-height: 520px;">
+            <li class="nav-item dropdown d-none">
+              <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"
+                aria-expanded="false">Locations</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">London</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Belvedere</a></li>
+                    <li><a class="dropdown-item" href="#">West London</a></li>
+                    <li><a class="dropdown-item" href="#">Camden town</a></li>
+                    <li><a class="dropdown-item" href="#">Hendon</a></li>
+                    <li><a class="dropdown-item" href="#">Kensington</a></li>
+                    <li><a class="dropdown-item" href="#">Chingford</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Scotland</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Aberdeen</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Greater London</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Brentford</a></li>
+                    <li><a class="dropdown-item" href="#">Hounslow</a></li>
+                    <li><a class="dropdown-item" href="#">Croydon</a></li>
+                    <li><a class="dropdown-item" href="#">Greenford</a></li>
+                    <li><a class="dropdown-item" href="#">Kingston upon Thames</a></li>
+                    <li><a class="dropdown-item" href="#">Harrow</a></li>
+                    <li><a class="dropdown-item" href="#">North Finchley</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Birmingham</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">City Center</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">East
+                    London</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Canary Wharf</a></li>
+                    <li><a class="dropdown-item" href="#">Chigwell</a></li>
+                    <li><a class="dropdown-item" href="#">Dagehnam</a></li>
+                    <li><a class="dropdown-item" href="#">Hainult</a></li>
+                    <li><a class="dropdown-item" href="#">Chadwell Heath</a></li>
+                    <li><a class="dropdown-item" href="#">Romford</a></li>
+                    <li><a class="dropdown-item" href="#">Woodford</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Leeds</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">City Center</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Manchester</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Stretford</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Plymouth</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mutley</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Reading</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">East Reading</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Salisbury</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Windsor Street</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Southampton</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Back of the Walls</a></li>
+                    <li><a class="dropdown-item" href="#">Woolston</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Surrey</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Staines</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Swindon</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">City Center</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Leamington Spa</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">City Center</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Warwick</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Heathcote</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Netherlands</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Amsterdam</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Essex</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Basildon</a></li>
+                    <li><a class="dropdown-item" href="#">Chafford Hundred</a></li>
+                    <li><a class="dropdown-item" href="#">Loughton</a></li>
+                    <li><a class="dropdown-item" href="#">Chelmsford</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Hertfordshire</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Stevenage</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">Kent</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Belvedere</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                aria-expanded="false">Partnerships</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Client</a></li>
+                <li><a class="dropdown-item" href="#">Accommodation Partner</a></li>
+                <li><a class="dropdown-item" href="#">Landlord</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                aria-expanded="false">Solutions</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Technology</a></li>
+                <li><a class="dropdown-item" href="#">Booking Platform</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                aria-expanded="false">About Us</a>
+              <ul class="dropdown-menu end-0">
+                <li><a class="dropdown-item" href="#">Services</a></li>
+                <li><a class="dropdown-item" href="#">Our Brand</a></li>
+                <li><a class="dropdown-item" href="#">Sustainability</a></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-none p-3 mt-n3">
+            <a class="btn btn-primary w-100 mb-1"
+              href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank"
+              rel="noopener">
+              <i class="ai-cart fs-xl me-2 ms-n1"></i>
+              Buy now
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- Hero slider -->
+    <section class="position-relative py-5 hero-slider-bg bg-position-center" style="min-height: 140vh;">
+      <!-- Content -->
+      <div class="container position-relative z-2 py-lg-3 py-xl-5 my-5">
+        <div class="row pt-md-5 my-5">
+          <div class="col mb-md-4 mb-lg-5 text-center">
+            <h1 class="h2 mb-2 color-primary">Corporate Housing & Serviced<br>Apartment Specialists</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8 mx-auto">
+            <!-- Booking from START -->
+            <form class="row g-2 mt-3 bg-white p-3 pb-4 rounded-3">
+              <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Enter any location">
+              </div>
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-4">
+                    <select class="form-select">
+                      <option selected>Any Size</option>
+                      <option>1 BHK</option>
+                      <option>2 BHK</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="date" class="form-control">
+                  </div>
+                  <div class="col-md-4">
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="row mt-3">
+              <div class="col-md-12 text-center">
+                <button class="btn btn-primary">Search</button>
+              </div>
             </div>
-          </nav>
-        </div>
-      </header>
-
-
-      <!-- Hero slider -->
-      <section class="position-relative py-5 hero-slider-bg bg-position-center" style="min-height: 750px;">
-        <!-- Content -->
-        <div class="container position-relative z-2 py-lg-3 py-xl-5 my-5">
-          <div class="row pt-md-5 my-5">
-            <div class="col mb-md-4 mb-lg-5 text-center">
-              <h1 class="display-6 mb-4">Corporate Housing & Serviced Apartment Specialists</h1>              
-            </div>
+            <!-- Booking from END -->
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="container pt-5 mt-lg-3 mt-xl-4 mt-xxl-0">
-        <h2 class="h1 text-center pt-2 pt-sm-3 pt-md-4 pt-xl-5 mt-lg-2 mt-xl-1">Our services</h2>
-        <p class="text-center pb-3 mb-3 mb-lg-4">Your Complete Solution for Corporate Housing and Business Travel</p>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+    <section class="container">
+      <h2 class="h2 text-center py-1 py-sm-2 py-md-3 pt-xl-5 mt-lg-2 mt-xl-1 text-primary">Your Complete Solution for Business Accommodation!!</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
 
-          <!-- Item -->
-          <div class="col">
-            <a class="card card-hover h-100 border-0 bg-secondary rounded-1 text-decoration-none overflow-hidden" href="#">
-              <div class="card-body d-flex align-items-end position-absolute top-0 start-0 w-100 h-100 opacity-0 bg-size-cover bg-position-center pb-4" style="background-image: url(assets/img/corporate/01.jpg);">
-                <div class="btn btn-icon btn-lg btn-outline-light rounded-circle pe-none mb-3">
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-              <div class="card-body pb-3">
-                <svg class="d-block mt-1 mt-sm-0 mb-4" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                  <g class="text-info">
-                    <path d="M26.307 23.1116C26.307 28.3136 22.09 32.5307 16.888 32.5307C11.6859 32.5307 7.46891 28.3136 7.46891 23.1116C7.46891 17.9096 11.6859 13.6925 16.888 13.6925C17.1467 13.6925 17.4028 13.7038 17.6562 13.7243V6.24121C17.4016 6.22973 17.1455 6.22363 16.888 6.22363C7.56102 6.22363 0 13.7846 0 23.1116C0 32.4386 7.56102 39.9996 16.888 39.9996C26.2149 39.9996 33.7759 32.4386 33.7759 23.1116C33.7759 22.8541 33.7698 22.598 33.7584 22.3433H26.2753C26.2958 22.5968 26.307 22.8529 26.307 23.1116Z" fill="currentColor"></path>
-                  </g>
-                  <g class="text-primary">
-                    <path d="M40 20C40 8.9543 31.0457 0 20 0V20H40Z" fill="currentColor"></path>
-                  </g>
-                </svg>
-                <h3 class="h4">Business & Corporate Travel</h3>
-                <p class="mb-0">Your accommodation, your way perfectly crafted for business travel.</p>
-              </div>
-              <div class="card-footer border-0 pt-3 mb-3">
-                <div class="btn btn-icon btn-lg btn-outline-primary rounded-circle pe-none">
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Item -->
-          <div class="col">
-            <a class="card card-hover h-100 border-0 bg-secondary rounded-1 text-decoration-none overflow-hidden" href="#">
-              <div class="card-body d-flex align-items-end position-absolute top-0 start-0 w-100 h-100 opacity-0 bg-size-cover bg-position-center pb-4" style="background-image: url(assets/img/corporate/02.jpg);">
-                <div class="btn btn-icon btn-lg btn-outline-light rounded-circle pe-none mb-3">
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-              <div class="card-body pb-3">
-                <svg class="d-block mt-1 mt-sm-0 mb-4" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                  <g class="text-info">
-                    <path d="M25,25h15v15H25V25z" fill="currentColor"></path>
-                  </g>
-                  <g class="text-primary">
-                    <path d="M10,20c0-5.5,4.5-10,10-10s10,4.5,10,10h10C40,9,31,0,20,0S0,9,0,20s9,20,20,20V30C14.5,30,10,25.5,10,20z" fill="currentColor"></path>
-                  </g>
-                </svg>
-                <h3 class="h4">Global Mobility & Relocation</h3>
-                <p class="mb-0">Seamless Transitions: Expertly Sourcing Apartments for Assignees on the Move</p>
-              </div>
-              <div class="card-footer border-0 pt-3 mb-3">
-                <div class="btn btn-icon btn-lg btn-outline-primary rounded-circle pe-none">
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Item -->
-          <div class="col">
-            <a class="card card-hover h-100 border-0 bg-secondary rounded-1 text-decoration-none overflow-hidden" href="#">
-              <div class="card-body d-flex align-items-end position-absolute top-0 start-0 w-100 h-100 opacity-0 bg-size-cover bg-position-center pb-4" style="background-image: url(assets/img/corporate/03.jpg);">
-                <div class="btn btn-icon btn-lg btn-outline-light rounded-circle pe-none mb-3">
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-              <div class="card-body pb-3">
-                <svg class="d-block mt-1 mt-sm-0 mb-4" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                  <g class="text-primary">
-                    <path d="M25.2791 12.7502C28.1954 9.83389 28.1954 5.10556 25.2791 2.18921C22.3627 -0.727136 17.6344 -0.727137 14.718 2.18921C11.8017 5.10556 11.8017 9.83389 14.718 12.7502C17.6344 15.6666 22.3627 15.6666 25.2791 12.7502Z" fill="currentColor"></path>
-                  </g>
-                  <g class="text-info">
-                    <path d="M14.6859 29.3056C15.6559 27.0123 16.9202 24.8838 18.4577 22.9467C13.8666 17.9802 7.29664 14.8701 0 14.8701V40.0004H12.5259C12.5259 36.2925 13.2527 32.6942 14.6859 29.3056Z" fill="currentColor"></path>
-                  </g>
-                  <g class="text-primary">
-                    <path d="M40.0014 40.0004V14.8701C26.1223 14.8701 14.8711 26.1214 14.8711 40.0004H40.0014Z" fill="currentColor"></path>
-                  </g>
-                </svg>
-                <h3 class="h4">Travel<br>Management</h3>
-                <p class="mb-0">Let us handle your accommodation needs while you focus on what matters most.</p>
-              </div>
-              <div class="card-footer border-0 pt-3 mb-3">
-                <div class="btn btn-icon btn-lg btn-outline-primary rounded-circle pe-none"><i class="ai-arrow-right"></i></div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="container pt-5 pb-4 mb-2 my-lg-3 my-xl-0 my-xxl-0">
         <!-- Item -->
-        <div class="row align-items-center py-4 py-lg-0 my-sm-2 my-md-4 my-lg-0 my-xl-2 my-xxl-0 aos-init" data-aos="fade-up" data-aos-duration="600" data-aos-offset="300" data-disable-parallax-down="md">
-          <div class="col-md-6 pt-xl-0 pb-3 pb-md-0 mb-3 mb-sm-4 mb-md-0">
-            <img class="d-dark-mode-none" src="assets/img/corporate/01.jpg" width="636" alt="Image">
-            <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-1/features/03-dark.png" width="636" alt="Image">
-          </div>
-          <div class="col-md-6 col-xl-5 offset-xl-1 pt-xl-2 aos-init" data-aos="fade-up" data-aos-duration="850" data-aos-offset="200" data-disable-parallax-down="md">
-            <div class="ps-md-3 ps-xl-0">
-              <h2 class="h1 mb-lg-4">Travel Better, Work Smarter with Dwellers Delight</h2>
-              <h5>Dwellers Delight Livinng Ltd is a leading
-                provider of tailored corporate and
-                business accommodation solutions,
-                serving clients across the UK. With a
-                commitment to excellence, we cater to
-                corporate travellers, project teams,
-                relocation professionals, and emergency
-                stays, offering a wide range of high-quality
-                serviced accommodations in key locations
-                in UK.</h5>
+        <div class="col">
+          <a class="card card-hover h-100 border-0 bg-secondary rounded-1 text-decoration-none overflow-hidden">
+            <div class="ratio ratio-21x9">
+              <img class="object-fit-cover " src="assets/img/corporate/01.jpg" />
             </div>
-          </div>
+            <div class="card-body p-4">
+              <h3 class="h4 text-primary">Business & Corporate Travel</h3>
+              <p class="mb-0">Your accommodation, your way perfectly crafted for business travel.</p>
+            </div>
+          </a>
         </div>
-        <!-- Item -->
-        <div class="row align-items-center py-4 py-lg-0 my-sm-2 my-md-4 my-lg-0 my-xl-2 my-xxl-0 aos-init" data-aos="fade-up" data-aos-duration="600" data-aos-offset="300" data-disable-parallax-down="md">
-            <div class="col-md-6 offset-xl-1 order-md-2 pb-3 pb-md-0 mb-3 mb-sm-4 mb-md-0">
-              <img class="d-dark-mode-none" src="assets/img/corporate/03.jpg" width="636" alt="Image">
-              <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-1/features/03-dark.png" width="636" alt="Image">
-            </div>
-            <div class="col-md-6 col-xl-5 order-md-1 aos-init" data-aos="fade-up" data-aos-duration="850" data-aos-offset="200" data-disable-parallax-down="md">
-              <div class="ps-md-3 ps-xl-0">
-                <h2 class="h1 mb-lg-4">Seamless Booking for Business Travel – Instant Quotes & No Markups</h2>
-                <h5>Dwellers Delight provides vetted
-                    properties across the UK with
-                    instant booking or quotation
-                    requests, backed by a price
-                    match guarantee. Our platform
-                    eliminates multiple markups,
-                    allowing suppliers to quote on the
-                    go and respond within seconds
-                    using Instant Quote.</h5>
-              </div>
-            </div>
-          </div>
-      </section>
 
-      <section class="container py-5 my-lg-3 my-xl-4 my-xxl-0">
-        <h2 class="h1 text-center pt-2 pt-sm-3 pt-md-4 pt-xl-0 mt-lg-2 mt-xl-0 text-ca">Our Certifications</h2>
-        <p class="text-center pb-2 pb-sm-0 text-capitalize">You're Guaranteed 100% Trust and Protection</p>
-        <div class="row row-cols-3 row-cols-md-5 g-2 g-md-0 pb-2 pb-sm-3 pb-md-4 pb-xl-5 align-items-center">
-          <div class="col">
-            <img class="d-block mx-auto" src="https://dwellersdelight.com/wp-content/uploads/2024/05/itm.png" width="220" alt="">
-          </div>
-          <div class="col">
-            <img class="d-block mx-auto" src="https://dwellersdelight.com/wp-content/uploads/2024/05/gbta-jpg.webp" width="220" alt="">
-          </div>
-          <div class="col">
-            <img class="d-block mx-auto" src="https://dwellersdelight.com/wp-content/uploads/2024/06/i-prac-logo-1024x358.webp" width="220" alt="">
-          </div>
-          <div>
-            <img class="d-block mx-auto" src="https://dwellersdelight.com/wp-content/uploads/2024/07/iata-1024x558.png" width="220" alt="">
-          </div>
-          <div class="col">
-            <img class="d-block mx-auto" src="https://dwellersdelight.com/wp-content/uploads/2023/02/download.png" width="220" alt="">
+        <!-- Item -->
+        <div class="col">
+          <a class="card card-hover h-100 border-0 bg-secondary rounded-1 text-decoration-none overflow-hidden">
+            <div class="ratio ratio-21x9">
+              <img class="object-fit-cover " src="assets/img/corporate/02.jpg" />
+            </div>
+            <div class="card-body p-4">
+              <h3 class="h4 text-primary">Global Mobility & Relocation</h3>
+              <p class="mb-0">Seamless Transitions: Expertly Sourcing Apartments for Assignees on the Move</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <a class="card card-hover h-100 border-0 bg-secondary rounded-1 text-decoration-none overflow-hidden">
+            <div class="ratio ratio-21x9">
+              <img class="object-fit-cover " src="assets/img/corporate/03.jpg" />
+            </div>
+            <div class="card-body p-4">
+              <h3 class="h4 text-primary">Travel Management</h3>
+              <p class="mb-0">Let us handle your accommodation needs while you focus on what matters most.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container pt-5 pb-4 mb-2 my-lg-3 my-xl-0 my-xxl-0">
+      <!-- Item -->
+      <div class="row align-items-center py-4 py-lg-0 my-sm-2 my-md-4 my-lg-0 my-xl-2 my-xxl-0 aos-init"
+        data-aos="fade-up" data-aos-duration="600" data-aos-offset="300" data-disable-parallax-down="md">
+        <div class="col-md-6 pt-xl-0 pb-3 pb-md-0 mb-3 mb-sm-4 mb-md-0">
+          <div class="ratio ratio-4x3">
+            <img class="d-dark-mode-none object-fit-cover" src="assets/img/corporate/01.jpg" width="636" alt="Image">
+            <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-1/features/03-dark.png" width="636"
+              alt="Image">
           </div>
         </div>
-      </section>
+        <div class="col-md-6 col-xl-5 offset-xl-1 pt-xl-2 aos-init" data-aos="fade-up" data-aos-duration="850"
+          data-aos-offset="200" data-disable-parallax-down="md">
+          <div class="ps-md-3 ps-xl-0">
+            <h2 class="h2 mb-lg-4 text-primary">Travel Better, Work Smarter with Dwellers Delight</h2>
+            <h5 class="fw-normal">Dwellers Delight Livinng Ltd is a leading
+              provider of tailored corporate and
+              business accommodation solutions,
+              serving clients across the UK. With a
+              commitment to excellence, we cater to
+              corporate travellers, project teams,
+              relocation professionals, and emergency
+              stays, offering a wide range of high-quality
+              serviced accommodations in key locations
+              in UK.</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Item -->
+      <div class="row align-items-center py-4 py-lg-0 my-sm-2 my-md-4 my-lg-0 my-xl-2 my-xxl-0 aos-init"
+        data-aos="fade-up" data-aos-duration="600" data-aos-offset="300" data-disable-parallax-down="md">
+        <h2 class="h2 mb-md-4 mt-md-5 text-primary text-center">Seamless Booking for Business Travel – Instant Quotes & No Markups</h2>
+        <div class="col-md-6 offset-xl-1 order-md-2 pb-3 pb-md-0 mb-3 mb-sm-4 mb-md-0">
+          <div class="ratio ratio-4x3">
+            <img class="d-dark-mode-none object-fit-cover" src="assets/img/corporate/03.jpg" width="636" alt="Image">
+            <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-1/features/03-dark.png" width="636"
+              alt="Image">
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-5 order-md-1 aos-init" data-aos="fade-up" data-aos-duration="850"
+          data-aos-offset="200" data-disable-parallax-down="md">
+          <div class="ps-md-3 ps-xl-0">
+            
+            <h4 class="fw-normal">Dwellers Delight provides vetted
+              properties across the UK with
+              instant booking or quotation
+              requests, backed by a price
+              match guarantee. Our platform
+              eliminates multiple markups,
+              allowing suppliers to quote on the
+              go and respond within seconds
+              using Instant Quote.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5 my-lg-3 my-xl-4 my-xxl-0 mb-0">
+      <h2 class="21 text-center pt-2 pt-sm-3 pt-md-4 pt-xl-0 mt-lg-2 mt-xl-0 text-center color-primary">You're Guaranteed 100% Trust and Protection</h2>
+      <div class="row row-cols-3 row-cols-md-5 g-2 g-md-0 pb-2 pb-sm-3 pb-md-4 pb-xl-5 align-items-center">
+        <div class="col">
+          <img class="d-block mx-auto" src="https://dwellersdelight.com/wp-content/uploads/2024/05/itm.png" width="220"
+            alt="">
+        </div>
+        <div class="col">
+          <img class="d-block mx-auto" src="https://dwellersdelight.com/wp-content/uploads/2024/05/gbta-jpg.webp"
+            width="220" alt="">
+        </div>
+        <div class="col">
+          <img class="d-block mx-auto"
+            src="https://dwellersdelight.com/wp-content/uploads/2024/06/i-prac-logo-1024x358.webp" width="220" alt="">
+        </div>
+        <div>
+          <img class="d-block mx-auto" src="https://dwellersdelight.com/wp-content/uploads/2024/07/iata-1024x558.png"
+            width="220" alt="">
+        </div>
+        <div class="col">
+          <img class="d-block mx-auto" src="https://dwellersdelight.com/wp-content/uploads/2023/02/download.png"
+            width="220" alt="">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <!-- SVG decoration -->
+      <figure class="background-figure">
+          <svg class="fill-mode" width="775px" height="834px" viewBox="0 0 775 834" style="enable-background:new 0 0 775 834; opacity: 0.05;" xml:space="preserve">
+              <path d="M486.1,564.4c-3.6,2.5-7.4,4.8-11.3,6.4c-12,5.5-25.7,7.9-42.2,7.4c-30.6-1.1-65.6-12.5-102.8-24.4 c-50.7-16.2-103.3-33.4-152.5-27c-56.1,7.2-97.9,44.4-128,114l-0.4-0.2c67.5-156.1,181-119.5,281.1-87.1c37,12,72,23.2,102.5,24.3 c34.3,1.2,58.1-10.7,74.9-37.4C530.1,505,547.1,466,565,425.1C619.4,301,675.6,172.7,892.1,141.3l0.1,0.4 c-216.2,31.4-272.5,159.5-326.8,283.5c-18.1,41.1-35,79.7-57.7,115.6C501.6,550.7,494.5,558.5,486.1,564.4z"></path>
+              <path d="M500.9,551.4c-43.7,31-103,15.8-165.5-0.2c-49.9-12.7-101.5-25.8-148.7-16.7c-53.3,10.5-93.2,49-121.6,118 l-0.5-0.1c15.3-37.1,33.3-64.7,55.1-84.7c19.5-17.7,41.3-28.6,66.7-33.7c47.4-9.2,99,3.9,148.9,16.6 c70.4,17.9,137.1,34.9,181.3-14.4c35.7-39.9,57.3-91.7,80.2-146.7c23.8-56.7,48.2-115.5,90.2-163.6c22.7-25.9,48.4-46.4,78.4-62.4 c33.9-18.1,72.2-30.3,117.1-37.1l0.1,0.4C695,155.3,645.2,274.5,597.1,389.7c-22.9,55-44.5,106.8-80.4,146.8 C512.3,542.4,506.6,547.3,500.9,551.4z"></path>
+              <path d="M521.3,536.4c-21.9,15.5-48.4,23.4-80.8,23.8c-31.2,0.5-65.1-5.8-97.9-11.9c-49.3-9.2-100.2-18.7-145.7-6.5 c-51.1,13.7-88.9,53.7-116,122.6l-0.6-0.2c60.5-154.1,163.3-135,262.6-116.5c68.1,12.7,132.6,24.6,183.6-15.8 c48.1-38.2,71.1-100.6,95.6-166.5c20.3-55,41.4-111.6,78.3-158.1c20-25.1,42.7-44.9,69.2-60.5c30.1-17.5,64.2-29.1,104.3-35.4 l0.2,0.6c-167.2,26.3-210,141.9-251.4,253.5C598.3,431.5,575,493.8,527,532.2C525.1,533.8,523.2,535.1,521.3,536.4z"></path>
+              <path d="M548.9,520.3c-4,2.9-8.2,5.6-12.6,8c-56.6,31.5-120.9,23.8-183,16.6c-51.7-6-100.4-11.8-144.6,3.2 c-49.9,16.9-85.5,57.7-111.3,128.2l-0.6-0.2c13.7-37.3,30.1-66,49.9-87.8c17.8-19.4,37.9-32.8,61.8-40.9 c44.3-15,93.1-9.3,144.9-3.2c62.1,7.2,126.3,14.8,182.8-16.6c59.6-33.2,82-104.7,105.9-180.4c17.1-54.3,34.7-110.5,67.2-156.6 c36.7-52,87.8-82.8,155.7-94l0.2,0.6c-151.9,25-187.8,139.3-222.3,250C620.4,417.6,599.4,484.5,548.9,520.3z"></path>
+              <path d="M573.5,509.5c-8.2,5.8-17.4,10.7-27.7,14.6c-59.3,22-119.1,18.8-176.8,15.8c-53.2-2.8-103.3-5.3-147.1,12.5 C172.6,572.3,138.1,615.5,113,688l-0.5-0.1c25.1-72.7,59.6-115.9,108.9-136c44-18,94.2-15.3,147.6-12.6 c57.7,3,117.4,6.1,176.6-15.9c70.7-26.2,91.1-106.3,112.8-191.4c13.9-54.5,28.3-111,56.7-156.9C747,123.2,793,92.6,855.6,82l0,0.7 C716.3,106.5,687,221.4,658.9,332.2C640.4,405,622.6,474.4,573.5,509.5z"></path>
+              <path d="M595.2,502.3c-11.3,8-24.6,14-40,17.4c-56.8,12.7-112,12.7-160.5,12.9c-60.2,0.1-112,0.2-157,21.1 c-49.5,23-84,69.3-108.5,146l-0.6-0.2c24.3-76.7,58.9-123.1,108.6-146.3c45.1-21.1,97.2-21.1,157.4-21.2 c48.6,0,103.6-0.1,160.5-12.9c81.6-18.3,99-106.7,117.4-200.6c10.7-55,22-112,46.6-158.2C747,108,788.6,77.5,846.5,67.2l0.1,0.8 C718,91.2,695.2,206.9,673.2,318.9C658.3,394.9,643.8,467.8,595.2,502.3z"></path>
+              <path d="M615.3,497.4c-13.7,9.7-30.2,16-50.8,18c-44.4,4.6-86.5,5.8-123.6,6.8c-71.2,2-132.8,3.7-182,27.7 C206,575.6,169.8,627,145,711.3l-0.8-0.1c13-44.6,29-79.3,48.6-106.3c18.1-24.9,39.5-43.1,65.6-55.7 c49.5-24.1,110.9-25.8,182.4-27.7c37.1-1,79.3-2.2,123.5-6.7c92.6-9.4,106.2-106.5,120.5-209.2c7.8-55.9,15.9-113.6,37-160 c23.8-52.7,61.6-83.1,115.3-93.4l0.3,0.7c-53.4,10.1-91,40.4-114.6,92.9c-21.1,46.4-29.2,104.1-36.8,159.9 C674.6,386,663.8,463,615.3,497.4z"></path>
+              <path d="M634.4,494c-15.5,11-35.2,17.2-60.4,17.3c-12.3,0.1-24.5,0.1-36.1,0.1c-103.7,0-185.5-0.1-246.4,26.4 c-63.5,27.7-103.7,85-130.5,185.5l-0.8-0.1c13.9-52.5,31.3-92.6,53.2-122.9c20.7-28.8,46.2-49.4,77.8-63.2 c61-26.6,142.9-26.4,246.6-26.4c11.7,0.1,23.8,0,36.1-0.1c103.8-0.2,112.9-105.6,122.5-217.2c4.7-56.9,9.9-115.5,27.5-162.4 c20-53.1,54.1-83.7,104.1-93.7l0.1,0.8c-49.5,9.8-83.5,40.3-103.3,93.1c-17.6,46.9-22.7,105.4-27.6,162 C690.1,378.2,682.9,459.6,634.4,494z"></path>
+              <path d="M652.7,491.8c-17.9,12.7-40.7,17.7-69.2,15.4C328,486.2,228.3,517.5,177.2,735.2l-0.9-0.3 c25.9-110.7,64-171.6,127-204c66.6-34.2,160.2-34.6,280.3-24.7c32.2,2.6,56.9-4.1,75.4-20.5c42.1-37.4,45.1-118.6,48-204.7 c4-116.5,8.1-236.8,112.1-258.6l0.1,0.8C715.9,44.8,711.8,164.8,707.8,280.9c-3.1,86.3-5.8,167.7-48.3,205.2 C657.3,488.3,655,490.1,652.7,491.8z"></path>
+              <path d="M670.6,490.3c-19.3,13.7-44.8,17.9-77.7,12.7c-138.5-21.4-227.1-13-287.3,27 c-55.4,36.8-89.1,101.7-112.4,216.9l-0.9-0.3C215.8,631,249.6,566,305.1,528.9c60.3-40.1,149.1-48.6,288.1-27.3 c35.9,5.5,63,0,82.6-16.9c43.2-37.5,42.2-124.3,40.9-216.1C714.9,151,713,28.8,809.9,7.7l0.1,0.8c-96,21.1-94.3,142.7-92.7,260.6 c1.3,92.1,2.4,179-41.1,216.7C674.3,487.4,672.6,488.9,670.6,490.3z"></path>
+          </svg>
+      </figure>
   
+      <div class="container position-relative">
+          <div class="row g-4 justify-content-between">
+  
+              <!-- Widget 1 START -->
+              <div class="col-lg-3">
+                  <!-- logo -->
+                  <a class="me-0" href="index.html">
+                      <img class="invert-logo" src="assets/img/logo.png" alt="logo">
+                  </a>
+  
+                  <p class="mt-4 mb-2">Specialize in providing quality flexi let &amp; corporate and serviced accommodation in and around London. With luxury, modern apartments our guests can select location of their choice.</p>
+              </div>
+              <!-- Widget 1 END -->
+  
+              <!-- Widget 2 START -->
+              <div class="col-lg-8 col-xxl-7">
+                  <div class="row g-4">
+                      <!-- Link block -->
+                      <div class="col-6 col-md-4">
+                          <h6 class="mb-2 mb-md-4 f-link-heading">Quick links</h6>
+                          <ul class="nav flex-column">
+                              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Properties <span class="badge text-bg-danger ms-2">65486</span></a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Our Brands</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Property Owners</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                          </ul>
+                      </div>
+  
+                      <!-- Link block -->
+                      <div class="col-6 col-md-4">
+                          <h6 class="mb-2 mb-md-4 f-link-heading">Community</h6>
+                          <ul class="nav flex-column">
+                              <li class="nav-item"><a class="nav-link" href="#">Documents</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Supports <i class="bi bi-box-arrow-up-right small ms-1"></i></a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Faqs</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">News and blogs</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Terms &amp; condition</a></li>
+                          </ul>
+                      </div>
+  
+                      <!-- Link block -->
+                      <div class="col-md-4">
+                          <h6 class="mb-2 mb-md-4 f-link-heading">App available on</h6>
+                          <div class="row g-2 mt-2 mb-4 mb-sm-5">
+                              <!-- Google play store button -->
+                              <div class="col-5 col-sm-4 col-md-6">
+                                  <a href="#"> <img src="assets/img/app-store.svg" alt=""> </a>
+                              </div>
+                              <!-- App store button -->
+                              <div class="col-5 col-sm-4 col-md-6">
+                                  <a href="#"> <img src="assets/img/google-play.svg" alt="app-store"> </a>
+                              </div>
+                          </div>
+  
+                          <!-- Social buttons -->
+                          <h6 class="mb-2 mb-md-4 f-link-heading">Follow on</h6>
+  
+                          <ul class="list-inline mb-0 mt-3">
+                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-facebook"></i></a> </li>
+                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-instagram"></i></a> </li>
+                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-twitter-x"></i></a> </li>
+                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-linkedin"></i></a> </li>
+                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-youtube"></i></a> </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <!-- Widget 2 END -->
+          </div>
+  
+          <!-- Divider -->
+          <hr class="mt-5 mb-2">
+  
+          <!-- Bottom footer -->
+          <div class="d-md-flex justify-content-center align-items-center py-4">
+              <!-- copyright text -->
+              <div> Copyrights ©2024 Dwellers Delight.</div>
+              <!-- copyright links-->
+          </div>
+      </div>
+  </footer>
+
 
     <!-- Back to top button -->
     <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
       <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10">
+        </circle>
       </svg>
       <i class="ai-arrow-up"></i>
     </a>
@@ -540,5 +740,6 @@
     <!-- Bootstrap + Theme scripts -->
     <script src="assets/js/theme.min.js"></script>
 
-  </body>
+</body>
+
 </html>

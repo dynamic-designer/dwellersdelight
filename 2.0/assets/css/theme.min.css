@@ -16141,10 +16141,10 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
 .btn-primary {
     --dw-btn-hover-color: #fff;
     --dw-btn-active-color: #fff;
-    --dw-btn-hover-bg: #37715d;
-    --dw-btn-active-bg: #37715d;
-    --dw-btn-hover-border-color: #37715d;
-    --dw-btn-active-border-color: #37715d;
+    --dw-btn-hover-bg: #1003a9;
+    --dw-btn-active-bg: #1003a9;
+    --dw-btn-hover-border-color: #1003a9;
+    --dw-btn-active-border-color: #1003a9;
     --dw-btn-disabled-color: #fff
 }
 
