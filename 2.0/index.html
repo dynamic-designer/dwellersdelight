@@ -148,45 +148,58 @@
     .navbar {
       background: linear-gradient(white, white, transparent);
     }
+    .header-user-button .nav-link {
+      padding-top: 7px !important;
+    }
+    .header-user-button svg circle, .header-user-button svg path {
+      transition: 0.3s;
+    }
+    .header-user-button:hover svg circle, .header-user-button:hover svg path {
+      stroke: currentcolor;
+    }
     .hero-slider-bg {
       background-size: 100% auto;
       background-position: bottom !important;
     }
     footer {
-  background-color: #1a1a1a;
-  color: #fff;
-  padding-top: 60px;
-  position: relative;
-  overflow: hidden;
-}
-footer .background-figure {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: -120px;
-  margin-left: -180px;
-}
-footer .background-figure svg.fill-mode {
-  fill: #fff;
-}
-footer .invert-logo {
-  filter: brightness(999);
-}
-footer h6 {
-  color: #fff;
-}
-footer .nav.flex-column:not(.nav-pills) .nav-link {
-  color: #fff;
-  padding-left: 0;
-  padding-bottom: 0.3rem;
-}
-.f-link-heading {
-  padding: 3px 8px 1px;
-  border-radius: 5px;
-  background-color: white;
-  color: #000;
-  display: inline-block;
-}
+      background-color: rgb(37, 44, 90);
+      color: #fff;
+      padding-top: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    footer .background-figure {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -120px;
+      margin-left: -180px;
+    }
+    footer .background-figure svg.fill-mode {
+      fill: #fff;
+    }
+    footer .invert-logo {
+      filter: brightness(999);
+    }
+    footer h6 {
+      color: #fff;
+    }
+    footer .nav.flex-column:not(.nav-pills) .nav-link {
+      color: #fff;
+      padding-left: 0;
+      padding-bottom: 0.3rem;
+    }
+    .f-link-heading {
+      padding: 3px 8px 1px;
+      border-radius: 5px;
+      background-color: white;
+      color: #000;
+      display: inline-block;
+    }
+    .footer-certi img {
+      max-width: 70px;
+      margin-right: 10px;
+    }
   </style>
 
   <!-- Page loading scripts -->
@@ -404,34 +417,49 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
                 </li>
               </ul>
             </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                aria-expanded="false">Solutions</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Technology</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Booking Platform</a></li> -->
+              </ul>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                 aria-expanded="false">Partnerships</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Client</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Client</a></li> -->
                 <li><a class="dropdown-item" href="#">Accommodation Partner</a></li>
                 <li><a class="dropdown-item" href="#">Landlord</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                aria-expanded="false">Solutions</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Technology</a></li>
-                <li><a class="dropdown-item" href="#">Booking Platform</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                 aria-expanded="false">About Us</a>
               <ul class="dropdown-menu end-0">
-                <li><a class="dropdown-item" href="#">Services</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Services</a></li> -->
                 <li><a class="dropdown-item" href="#">Our Brand</a></li>
                 <li><a class="dropdown-item" href="#">Sustainability</a></li>
-                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item" href="#">Get In Touch</a></li>
                 <li><a class="dropdown-item" href="#">Blog</a></li>
               </ul>
             </li>
+            <li class="nav-item dropdown header-user-button">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                <svg height="30" width="30" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="256" width="256"/><circle cx="128" cy="128" fill="none" r="96" stroke="#252C5A" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/><circle cx="128" cy="120" fill="none" r="40" stroke="#252C5A" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/><path d="M63.8,199.4a72,72,0,0,1,128.4,0" fill="none" stroke="#252C5A" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/></svg>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end" data-bs-popper="static">
+                <a class="dropdown-item" href="account-overview.html">
+                  Sign Up
+                </a>
+                <a class="dropdown-item" href="account-signin.html">
+                  Sign In
+                </a>
+              </div>
+            </li>
+            
           </ul>
           <div class="d-none p-3 mt-n3">
             <a class="btn btn-primary w-100 mb-1"
@@ -498,7 +526,7 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
         <!-- Item -->
         <div class="col">
           <a class="card card-hover h-100 border-0 bg-secondary rounded-1 text-decoration-none overflow-hidden">
-            <div class="ratio ratio-21x9">
+            <div class="ratio ratio-16x9">
               <img class="object-fit-cover " src="assets/img/corporate/01.jpg" />
             </div>
             <div class="card-body p-4">
@@ -511,7 +539,7 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
         <!-- Item -->
         <div class="col">
           <a class="card card-hover h-100 border-0 bg-secondary rounded-1 text-decoration-none overflow-hidden">
-            <div class="ratio ratio-21x9">
+            <div class="ratio ratio-16x9">
               <img class="object-fit-cover " src="assets/img/corporate/02.jpg" />
             </div>
             <div class="card-body p-4">
@@ -524,7 +552,7 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
         <!-- Item -->
         <div class="col">
           <a class="card card-hover h-100 border-0 bg-secondary rounded-1 text-decoration-none overflow-hidden">
-            <div class="ratio ratio-21x9">
+            <div class="ratio ratio-16x9">
               <img class="object-fit-cover " src="assets/img/corporate/03.jpg" />
             </div>
             <div class="card-body p-4">
@@ -536,62 +564,164 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
       </div>
     </section>
 
-    <section class="container pt-5 pb-4 mb-2 my-lg-3 my-xl-0 my-xxl-0">
+    <section class="pt-5 pb-4 mb-2 my-lg-3 my-xl-0 my-xxl-0">
       <!-- Item -->
-      <div class="row align-items-center py-4 py-lg-0 my-sm-2 my-md-4 my-lg-0 my-xl-2 my-xxl-0 aos-init"
-        data-aos="fade-up" data-aos-duration="600" data-aos-offset="300" data-disable-parallax-down="md">
-        <div class="col-md-6 pt-xl-0 pb-3 pb-md-0 mb-3 mb-sm-4 mb-md-0">
-          <div class="ratio ratio-4x3">
-            <img class="d-dark-mode-none object-fit-cover" src="assets/img/corporate/01.jpg" width="636" alt="Image">
-            <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-1/features/03-dark.png" width="636"
-              alt="Image">
+      <div class="container">
+        <div class="row align-items-center py-4 py-lg-0 my-sm-2 my-md-4 my-lg-0 my-xl-2 my-xxl-0 aos-init"
+          data-aos="fade-up" data-aos-duration="600" data-aos-offset="300" data-disable-parallax-down="md">
+          <div class="col-md-6 pt-xl-0 pb-3 pb-md-0 mb-3 mb-sm-4 mb-md-0">
+            <div class="ratio ratio-4x3">
+              <img class="d-dark-mode-none object-fit-cover" src="assets/img/corporate/01.jpg" width="636" alt="Image">
+              <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-1/features/03-dark.png" width="636"
+                alt="Image">
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 col-xl-5 offset-xl-1 pt-xl-2 aos-init" data-aos="fade-up" data-aos-duration="850"
-          data-aos-offset="200" data-disable-parallax-down="md">
-          <div class="ps-md-3 ps-xl-0">
-            <h2 class="h2 mb-lg-4 text-primary">Travel Better, Work Smarter with Dwellers Delight</h2>
-            <h5 class="fw-normal">Dwellers Delight Livinng Ltd is a leading
-              provider of tailored corporate and
-              business accommodation solutions,
-              serving clients across the UK. With a
-              commitment to excellence, we cater to
-              corporate travellers, project teams,
-              relocation professionals, and emergency
-              stays, offering a wide range of high-quality
-              serviced accommodations in key locations
-              in UK.</h5>
+          <div class="col-md-6 col-xl-5 offset-xl-1 pt-xl-2 aos-init" data-aos="fade-up" data-aos-duration="850"
+            data-aos-offset="200" data-disable-parallax-down="md">
+            <div class="ps-md-3 ps-xl-0">
+              <h2 class="h2 mb-lg-4 text-primary">Travel Better, Work Smarter with Dwellers Delight</h2>
+              <h5 class="fw-normal">Dwellers Delight Livinng Ltd is a leading
+                provider of tailored corporate and
+                business accommodation solutions,
+                serving clients across the UK. With a
+                commitment to excellence, we cater to
+                corporate travellers, project teams,
+                relocation professionals, and emergency
+                stays, offering a wide range of high-quality
+                serviced accommodations in key locations
+                in UK.</h5>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Item -->
-      <div class="row align-items-center py-4 py-lg-0 my-sm-2 my-md-4 my-lg-0 my-xl-2 my-xxl-0 aos-init"
-        data-aos="fade-up" data-aos-duration="600" data-aos-offset="300" data-disable-parallax-down="md">
-        <h2 class="h2 mb-md-4 mt-md-5 text-primary text-center">Seamless Booking for Business Travel – Instant Quotes & No Markups</h2>
-        <div class="col-md-6 offset-xl-1 order-md-2 pb-3 pb-md-0 mb-3 mb-sm-4 mb-md-0">
-          <div class="ratio ratio-4x3">
-            <img class="d-dark-mode-none object-fit-cover" src="assets/img/corporate/03.jpg" width="636" alt="Image">
-            <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-1/features/03-dark.png" width="636"
-              alt="Image">
+
+      <div class="swiper diff-property-slider pt-5">
+        <div class="swiper-wrapper">
+          <!-- Item -->
+          <div class="swiper-slide">
+            <a href="#" class="card card-hover zoom-effect border-0">
+              <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(18, 21, 25, 0.00) 35.56%, #121519 95.3%);"></span>
+              <div class="position-absolute bottom-0 w-100 z-2 p-4">
+                <div class="px-md-3">
+                  <h3 class="h4 text-white mb-0">Lorem ipsum</h3>
+                  <div class="d-flex align-items-center justify-content-between opacity-0">
+                    <span class="text-white fs-xs text-truncate opacity-70 pe-3">Lorem ipsum dolor sit amet</span>
+                    <i class="ai-circle-arrow-right fs-3 text-primary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="zoom-effect-wrapper">
+                <div class="zoom-effect-img">
+                  <img src="assets/img/corporate/03.jpg" alt="Ecommerce">
+                </div>
+              </div>
+            </a>
           </div>
-        </div>
-        <div class="col-md-6 col-xl-5 order-md-1 aos-init" data-aos="fade-up" data-aos-duration="850"
-          data-aos-offset="200" data-disable-parallax-down="md">
-          <div class="ps-md-3 ps-xl-0">
-            
-            <h4 class="fw-normal">Dwellers Delight provides vetted
-              properties across the UK with
-              instant booking or quotation
-              requests, backed by a price
-              match guarantee. Our platform
-              eliminates multiple markups,
-              allowing suppliers to quote on the
-              go and respond within seconds
-              using Instant Quote.</h4>
+          <!-- Item -->
+          <div class="swiper-slide">
+            <a href="#" class="card card-hover zoom-effect border-0">
+              <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(18, 21, 25, 0.00) 35.56%, #121519 95.3%);"></span>
+              <div class="position-absolute bottom-0 w-100 z-2 p-4">
+                <div class="px-md-3">
+                  <h3 class="h4 text-white mb-0">Lorem ipsum</h3>
+                  <div class="d-flex align-items-center justify-content-between opacity-0">
+                    <span class="text-white fs-xs text-truncate opacity-70 pe-3">Lorem ipsum dolor sit amet</span>
+                    <i class="ai-circle-arrow-right fs-3 text-primary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="zoom-effect-wrapper">
+                <div class="zoom-effect-img">
+                  <img src="assets/img/corporate/02.jpg" alt="Transportation">
+                </div>
+              </div>
+            </a>
           </div>
+          <!-- Item -->
+          <div class="swiper-slide">
+            <a href="#" class="card card-hover zoom-effect border-0">
+              <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(18, 21, 25, 0.00) 35.56%, #121519 95.3%);"></span>
+              <div class="position-absolute bottom-0 w-100 z-2 p-4">
+                <div class="px-md-3">
+                  <h3 class="h4 text-white mb-0">Lorem ipsum</h3>
+                  <div class="d-flex align-items-center justify-content-between opacity-0">
+                    <span class="text-white fs-xs text-truncate opacity-70 pe-3">Lorem ipsum dolor sit amet</span>
+                    <i class="ai-circle-arrow-right fs-3 text-primary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="zoom-effect-wrapper">
+                <div class="zoom-effect-img">
+                  <img src="assets/img/corporate/03.jpg" alt="Marketing">
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Item -->
+          <div class="swiper-slide">
+            <a href="#" class="card card-hover zoom-effect border-0">
+              <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background: linear-gradient(180deg, rgba(18, 21, 25, 0.00) 35.56%, #121519 95.3%);"></span>
+              <div class="position-absolute bottom-0 w-100 z-2 p-4">
+                <div class="px-md-3">
+                  <h3 class="h4 text-white mb-0">Lorem ipsum</h3>
+                  <div class="d-flex align-items-center justify-content-between opacity-0">
+                    <span class="text-white fs-xs text-truncate opacity-70 pe-3">Lorem ipsum dolor sit amet</span>
+                    <i class="ai-circle-arrow-right fs-3 text-primary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="zoom-effect-wrapper">
+                <div class="zoom-effect-img">
+                  <img src="assets/img/corporate/02.jpg" alt="Transportation">
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
+        <div class="swiper-pagination position-relative bottom-0 pt-2 pt-md-3 mt-4 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
       </div>
+
+      <!-- Item -->
+      <div class="container">
+        <div class="row align-items-center py-4 py-lg-0 my-sm-2 my-md-4 my-lg-0 my-xl-2 my-xxl-0 aos-init"
+          data-aos="fade-up" data-aos-duration="600" data-aos-offset="300" data-disable-parallax-down="md">
+          <h2 class="h2 mb-md-4 mt-md-5 text-primary text-center">Seamless Booking for Business Travel – Instant Quotes & No Markups</h2>
+          <div class="col-md-6 offset-xl-1 order-md-2 pb-3 pb-md-0 mb-3 mb-sm-4 mb-md-0">
+            <div class="ratio ratio-4x3">
+              <iframe src="https://www.youtube.com/embed/x7gqoHNgO-g?si=RO9BQn1Kv8csURVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <!-- <img class="d-dark-mode-none object-fit-cover" src="assets/img/corporate/03.jpg" width="636" alt="Image"> -->
+              <img class="d-none d-dark-mode-block" src="assets/img/landing/saas-1/features/03-dark.png" width="636"
+                alt="Image">
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-5 order-md-1 aos-init" data-aos="fade-up" data-aos-duration="850"
+            data-aos-offset="200" data-disable-parallax-down="md">
+            <div class="ps-md-3 ps-xl-0">
+              
+              <h4 class="fw-normal">Dwellers Delight provides vetted
+                properties across the UK with
+                instant booking or quotation
+                requests, backed by a price
+                match guarantee. Our platform
+                eliminates multiple markups,
+                allowing suppliers to quote on the
+                go and respond within seconds
+                using Instant Quote.</h4>
+            </div>
+          </div>
+        </div>
+      </div>   
     </section>
+
+    <section class="position-relative py-5 mt-5">
+      <div class="position-absolute w-100 h-100 top-0 start-0 bg-size-cover bg-position-center" style="background-image: url(assets/img/importance-of-business-travel.jpg);"></div>
+      <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background:rgba(0,0,0,0.5)"></span>
+      <div class="container position-relative py-5 z-2">
+        <h2 class="display-4 text-white">Find the Best Accommodation For Your Requirements.</h2>
+        <p class="text-white fs-5 mb-0 opacity-90">A team of trained Professional Reservations Managers and Industry Experts, are here to help you connect either yourself or your people to wherever you need to be and facilitate your accommodation requirements. We will assist you to find and book your corporate stay or serviced accommodation effortlessly, regardless of your industry.</p>
+      </div>
+    </section> 
 
     <section class="container py-5 my-lg-3 my-xl-4 my-xxl-0 mb-0">
       <h2 class="21 text-center pt-2 pt-sm-3 pt-md-4 pt-xl-0 mt-lg-2 mt-xl-0 text-center color-primary">You're Guaranteed 100% Trust and Protection</h2>
@@ -618,6 +748,82 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
         </div>
       </div>
     </section>
+
+    <section class="testimonial">
+      <div class="container">
+        <h2 class="text-primary text-center mb-4">Testimonial</h2>
+        <div class="swiper testimonial-slider">
+          <div class="swiper-wrapper">
+            <!-- Item -->
+            <div class="swiper-slide">
+              <div class="card border-0 bg-secondary card-hover h-100">
+                <div class="card-body text-center p-4">
+                  <i class="ai-quotes h1 fw-normal text-primary d-block mb-4"></i>
+                  <h5>Nice vacation staying at Dwellers</h5>
+                  <p class="card-text">We had a nice vacation staying at Dwellers. The house is a 10/15 minute walk from the station. We had a small problem with the lights but it was immediately resolved by the owner, thank you for your kindness and availability.</p>
+                  <h6 class="mb-1"> Laila, Verona, Italy ( Airbnb)</h6>
+                  <p class="text-body mb-3">Customer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="swiper-slide">
+              <div class="card border-0 bg-secondary card-hover h-100">
+                <div class="card-body text-center p-4">
+                  <i class="ai-quotes h1 fw-normal text-primary d-block mb-4"></i>
+                  <h5>Superb place and house</h5>
+                  <p class="card-text">We stayed in the house located in Chigwell. Superb place and house. You get everything you need to spend great time in London. The hosts are amazing and caring people. We arranged the trip to London as a gift for my mum's 70th birthday so there even was decoration for her. We loved every minute of the stay. Highly recommended place at an affordable price.</p>
+                  <h6 class="mb-1">Václav Kůla</h6>
+                  <p class="text-body mb-3">Customer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="swiper-slide">
+              <div class="card border-0 bg-secondary card-hover h-100">
+                <div class="card-body text-center p-4">
+                  <i class="ai-quotes h1 fw-normal text-primary d-block mb-4"></i>
+                  <h5>We had a lovely stay at Dwellers…</h5>
+                  <p class="card-text">We had a lovely stay at Dwellers Delight Dagehnam for five days. Very cosy, clean room with friendly hosts. Ten minute walk to local station to get the tube straight into London & a lovely local shopping centre with plenty of restaurants. Communication was fantastic and it was an easy, restful break. Thank you for being great hosts! Would highly recommend.</p>
+                  <h6 class="mb-1">Julia Peters</h6>
+                  <p class="text-body mb-3">Customer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item -->
+            <div class="swiper-slide">
+              <div class="card border-0 bg-secondary card-hover h-100">
+                <div class="card-body text-center p-4">
+                  <i class="ai-quotes h1 fw-normal text-primary d-block mb-4"></i>
+                  <h5>The host have been very responsive.</h5>
+                  <p class="card-text">Good side The host have been very responsive. House was clean when we moved in. Wi-Fi is great even in bedrooms upstairs. It was very hot and the host brought over two fans for us - that was very kind.</p>
+                  <h6 class="mb-1">Jo Singapore ( Airbnb )</h6>
+                  <p class="text-body mb-3">Customer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        <!-- Slider controls (Prev / Next buttons) -->
+        <div class="container d-flex justify-content-center justify-content-sm-end pt-3 mt-3 mt-lg-4">
+          <button class="btn btn-icon btn-sm btn-outline-primary rounded-circle me-3" type="button" id="prev-testimonial" aria-label="Previous slide" tabindex="0" aria-controls="swiper-wrapper-8ce6df1361068d838">
+            <i class="ai-arrow-left"></i>
+          </button>
+          <button class="btn btn-icon btn-sm btn-outline-primary rounded-circle" type="button" id="next-testimonial" aria-label="Next slide" tabindex="0" aria-controls="swiper-wrapper-8ce6df1361068d838">
+            <i class="ai-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="position-relative py-5 mt-5">
+      <div class="position-absolute w-100 h-100 top-0 start-0 bg-size-cover bg-position-center" style="background-image: url(assets/img/low-angle-shot-trees-redwood-forest-scaled.jpg);"></div>
+      <span class="position-absolute top-0 start-0 w-100 h-100 z-1" style="background:rgba(0,0,0,0.5)"></span>
+      <div class="container position-relative z-2 text-center">
+        <h2 class="display-3 text-white">Dwellers Delight Trees Pledge</h2>
+        <p class="text-white fs-4 mb-0 opacity-90">We aim to create a sustainable business for the future. Our “Dwellers Delight Trees Pledge” is our commitment to help offset our carbon emissions. Our initiative has already contributed to the planting of 500 trees.</p>
+      </div>
+    </section>   
 
     <footer>
       <!-- SVG decoration -->
@@ -661,6 +867,8 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
                               <li class="nav-item"><a class="nav-link" href="#">Location</a></li>
                               <li class="nav-item"><a class="nav-link" href="#">Properties <span class="badge text-bg-danger ms-2">65486</span></a></li>
                               <li class="nav-item"><a class="nav-link" href="#">Our Brands</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Solution</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
                               <li class="nav-item"><a class="nav-link" href="#">Property Owners</a></li>
                               <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                           </ul>
@@ -697,12 +905,17 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
                           <h6 class="mb-2 mb-md-4 f-link-heading">Follow on</h6>
   
                           <ul class="list-inline mb-0 mt-3">
-                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-facebook"></i></a> </li>
-                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-instagram"></i></a> </li>
-                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-twitter-x"></i></a> </li>
-                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-linkedin"></i></a> </li>
-                              <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-youtube"></i></a> </li>
+                              <li class="list-inline-item"> <a class="text-white" href="https://www.facebook.com/Dwellersdelight"><i class="bi bi-facebook"></i></a> </li>
+                              <li class="list-inline-item"> <a class="text-white" href="https://www.instagram.com/dwellersdelight/"><i class="bi bi-instagram"></i></a> </li>
+                              <!-- <li class="list-inline-item"> <a class="text-white" href="#"><i class="bi bi-twitter-x"></i></a> </li> -->
+                              <li class="list-inline-item"> <a class="text-white" href="https://www.linkedin.com/company/dwellers-delight-luxury-stay-ltd/"><i class="bi bi-linkedin"></i></a> </li>
+                              <li class="list-inline-item"> <a class="text-white" href="https://www.youtube.com/@dwellersdelight"><i class="bi bi-youtube"></i></a> </li>
                           </ul>
+                          <div class="flex gap-2 mt-3 footer-certi">
+                            <img src="assets/img/certi-1.jpeg" alt="certificate">
+                            <img src="assets/img/certi-2.jpeg" alt="certificate">
+                          </div>
+
                       </div>
                   </div>
               </div>
@@ -740,6 +953,44 @@ footer .nav.flex-column:not(.nav-pills) .nav-link {
     <!-- Bootstrap + Theme scripts -->
     <script src="assets/js/theme.min.js"></script>
 
+    <script> 
+      new Swiper('.diff-property-slider', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        breakpoints: {
+          560: {
+            slidesPerView: 2
+          },
+          960: {
+            slidesPerView: 3
+          }
+        }
+      });
+      new Swiper('.testimonial-slider', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        navigation: {
+          prevEl: "#prev-testimonial",
+          nextEl: "#next-testimonial",
+        },
+        breakpoints: {
+          560: {
+            slidesPerView: 2
+          },
+          960: {
+            slidesPerView: 3
+          },
+          1200: {
+            slidesPerView: 4
+          },
+        }
+      });
+    </script>
 </body>
 
 </html>
