@@ -487,23 +487,30 @@
           <div class="col-8 mx-auto">
             <!-- Booking from START -->
             <form class="row g-2 mt-3 bg-white p-3 pb-4 rounded-3">
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <input type="text" class="form-control" placeholder="Enter any location">
               </div>
-              <div class="col-md-7">
-                <div class="row">
-                  <div class="col-md-4">
+              <div class="col-md-8">
+                <div class="row g-2">
+                  <div class="col-md-3">
                     <select class="form-select">
                       <option selected>Any Size</option>
                       <option>1 BHK</option>
                       <option>2 BHK</option>
                     </select>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-3">
                     <input type="date" class="form-control">
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-3">
                     <input type="date" class="form-control">
+                  </div>
+                  <div class="col-md-3">
+                    <select class="form-select">
+                      <option selected>Guest</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -752,10 +759,10 @@
     <section class="testimonial">
       <div class="container">
         <h2 class="text-primary text-center mb-4">Testimonial</h2>
-        <div class="swiper testimonial-slider">
-          <div class="swiper-wrapper">
+        <div class="testimonial-slider">
+          <div class="row">
             <!-- Item -->
-            <div class="swiper-slide">
+            <div class="col-md-3">
               <div class="card border-0 bg-secondary card-hover h-100">
                 <div class="card-body text-center p-4">
                   <i class="ai-quotes h1 fw-normal text-primary d-block mb-4"></i>
@@ -767,7 +774,7 @@
               </div>
             </div>
             <!-- Item -->
-            <div class="swiper-slide">
+            <div class="col-md-3">
               <div class="card border-0 bg-secondary card-hover h-100">
                 <div class="card-body text-center p-4">
                   <i class="ai-quotes h1 fw-normal text-primary d-block mb-4"></i>
@@ -779,7 +786,7 @@
               </div>
             </div>
             <!-- Item -->
-            <div class="swiper-slide">
+            <div class="col-md-3">
               <div class="card border-0 bg-secondary card-hover h-100">
                 <div class="card-body text-center p-4">
                   <i class="ai-quotes h1 fw-normal text-primary d-block mb-4"></i>
@@ -791,7 +798,7 @@
               </div>
             </div>
             <!-- Item -->
-            <div class="swiper-slide">
+            <div class="col-md-3">
               <div class="card border-0 bg-secondary card-hover h-100">
                 <div class="card-body text-center p-4">
                   <i class="ai-quotes h1 fw-normal text-primary d-block mb-4"></i>
@@ -803,16 +810,6 @@
               </div>
             </div>
           </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-        <!-- Slider controls (Prev / Next buttons) -->
-        <div class="container d-flex justify-content-center justify-content-sm-end pt-3 mt-3 mt-lg-4">
-          <button class="btn btn-icon btn-sm btn-outline-primary rounded-circle me-3" type="button" id="prev-testimonial" aria-label="Previous slide" tabindex="0" aria-controls="swiper-wrapper-8ce6df1361068d838">
-            <i class="ai-arrow-left"></i>
-          </button>
-          <button class="btn btn-icon btn-sm btn-outline-primary rounded-circle" type="button" id="next-testimonial" aria-label="Next slide" tabindex="0" aria-controls="swiper-wrapper-8ce6df1361068d838">
-            <i class="ai-arrow-right"></i>
-          </button>
-        </div>
       </div>
     </section>
 
