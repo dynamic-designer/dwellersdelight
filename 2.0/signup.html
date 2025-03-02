@@ -241,13 +241,6 @@
           <img src="assets/img/logo.png" alt="" height="100" style="height: 70px;" />
         </a>
 
-        <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none"
-          href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank"
-          rel="noopener">
-          <i class="ai-cart fs-xl me-2 ms-n1"></i>
-          Buy now
-        </a>
-
         <!-- Mobile menu toggler (Hamburger) -->
         <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-label="Toggle navigation">
@@ -458,17 +451,8 @@
                   Sign In
                 </a>
               </div>
-            </li>
-            
+            </li>            
           </ul>
-          <div class="d-none p-3 mt-n3">
-            <a class="btn btn-primary w-100 mb-1"
-              href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/" target="_blank"
-              rel="noopener">
-              <i class="ai-cart fs-xl me-2 ms-n1"></i>
-              Buy now
-            </a>
-          </div>
         </nav>
       </div>
     </header>
@@ -483,64 +467,134 @@
           <div class="row align-items-center justify-content-center">
 
             <!-- Sign in form -->
-            <h2 class="col-md-8 h3 pb-2 pb-lg-4 text-center">Access our secure online booking platform to reserve accommodation, submit enquiries, and streamline your travel management.</h2>
             
             <div class="col-md-6">
-              <div class="ps-md-3 ps-lg-5 ps-xl-0">
-                <form class="needs-validation" novalidate="">
-                  <div class="row g-3">
-                    <div class="col mb-4">
-                      <input class="form-control form-control-lg" type="text" placeholder="First Name" required="">
-                    </div>
-                    <div class="col mb-4">
-                      <input class="form-control form-control-lg" type="text" placeholder="Last Name" required="">
-                    </div>
-                  </div>
-                  <div class="row g-3">
-                    <div class="col mb-4">
-                      <input class="form-control form-control-lg" type="text" placeholder="Company Name" required="">
-                    </div>
-                    <div class="col mb-4">
-                      <input class="form-control form-control-lg" type="text" placeholder="Email" required="">
-                    </div>
-                    <div class="col mb-4">
-                      <input class="form-control form-control-lg" type="text" placeholder="Contact Number" required="">
-                    </div>
-                  </div>
-                  <div class="row g-3">
-                    <div class="col mb-4">
-                      <input class="form-control form-control-lg" type="password" placeholder="Password" required="">
-                    </div>
-                    <div class="col mb-4">
-                      <input class="form-control form-control-lg" type="password" placeholder="Confirm Password" required="">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                        <div class="input-floating-label form-floating mb-4">
-                            <p>Dwellers Delight Livinng Ltd is committed to protecting and respecting your privacy, and we’ll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:</p>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" data-val="true" data-val-required="The I agree to receive other communications from Dwellers Delight Livinng Ltd. field is required." id="Communication" name="Communication" placeholder="" readonly="readonly" role="switch" type="checkbox" value="true"><input name="Communication" type="hidden" value="false">
-                                <label class="form-label" for="Communication">I agree to receive other communications from Dwellers Delight Livinng Ltd.</label>
+              <h2 class="h4 pb-2 pb-lg-4 text-center">Access our secure online booking platform to reserve accommodation, submit enquiries, and streamline your travel management.</h2>
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-client-tab" data-bs-toggle="pill" data-bs-target="#pills-client" type="button" role="tab" aria-controls="pills-client" aria-selected="true">Client</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-accommodationPartner-tab" data-bs-toggle="pill" data-bs-target="#pills-accommodationPartner" type="button" role="tab" aria-controls="pills-accommodationPartner" aria-selected="false">Accommodation Partner</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-client" role="tabpanel" aria-labelledby="pills-client-tab" tabindex="0">
+                  <div class="ps-md-3 ps-lg-5 ps-xl-0">
+                    <form class="needs-validation" novalidate="">
+                      <div class="row g-3">
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="First Name" required="">
+                        </div>
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="Last Name" required="">
+                        </div>
+                      </div>
+                      <div class="row g-3">
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="Company Name" required="">
+                        </div>
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="Email" required="">
+                        </div>
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="Contact Number" required="">
+                        </div>
+                      </div>
+                      <div class="row g-3">
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="password" placeholder="Password" required="">
+                        </div>
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="password" placeholder="Confirm Password" required="">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                            <div class="input-floating-label form-floating mb-4">
+                                <p>Dwellers Delight Livinng Ltd is committed to protecting and respecting your privacy, and we’ll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:</p>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" data-val="true" data-val-required="The I agree to receive other communications from Dwellers Delight Livinng Ltd. field is required." id="Communication" name="Communication" placeholder="" readonly="readonly" role="switch" type="checkbox" value="true"><input name="Communication" type="hidden" value="false">
+                                    <label class="form-label" for="Communication">I agree to receive other communications from Dwellers Delight Livinng Ltd.</label>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                            <div class="input-floating-label form-floating mb-4">
+                                <p>In order to provide you the content requested, we need to store and process your personal data. If you consent to us storing your personal data for this purpose, please tick the checkbox below.</p>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" data-val="true" data-val-required="The I agree to allow Dwellers Delight Livinng Ltd to store and process my personal data. field is required." id="DataAccessAgree" name="DataAccessAgree" placeholder="" readonly="readonly" role="switch" type="checkbox" value="true"><input name="DataAccessAgree" type="hidden" value="false">
+                                    <label class="form-label" for="DataAccessAgree">I agree to allow Dwellers Delight Livinng Ltd to store and process my personal data.</label>
+                                </div>
+                                <p>You can unsubscribe from these communications at any time. For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our Privacy Policy.</p>
                             </div>
                         </div>
                     </div>
+                      <button class="btn btn-lg btn-primary w-100 mb-4" type="submit">Sign up</button>
+                    </form>
                   </div>
-                  <div class="row">
-                    <div class="col">
-                        <div class="input-floating-label form-floating mb-4">
-                            <p>In order to provide you the content requested, we need to store and process your personal data. If you consent to us storing your personal data for this purpose, please tick the checkbox below.</p>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" data-val="true" data-val-required="The I agree to allow Dwellers Delight Livinng Ltd to store and process my personal data. field is required." id="DataAccessAgree" name="DataAccessAgree" placeholder="" readonly="readonly" role="switch" type="checkbox" value="true"><input name="DataAccessAgree" type="hidden" value="false">
-                                <label class="form-label" for="DataAccessAgree">I agree to allow Dwellers Delight Livinng Ltd to store and process my personal data.</label>
-                            </div>
-                            <p>You can unsubscribe from these communications at any time. For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our Privacy Policy.</p>
-                        </div>
-                    </div>
                 </div>
-                  <button class="btn btn-lg btn-primary w-100 mb-4" type="submit">Sign up</button>
-                </form>
+                <div class="tab-pane fade" id="pills-accommodationPartner" role="tabpanel" aria-labelledby="pills-accommodationPartner-tab" tabindex="0">
+                  <div class="ps-md-3 ps-lg-5 ps-xl-0">
+                    <form class="needs-validation" novalidate="">
+                      <div class="row g-3">
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="First Name" required="">
+                        </div>
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="Last Name" required="">
+                        </div>
+                      </div>
+                      <div class="row g-3">
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="Company Name" required="">
+                        </div>
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="Email" required="">
+                        </div>
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="text" placeholder="Contact Number" required="">
+                        </div>
+                      </div>
+                      <div class="row g-3">
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="password" placeholder="Password" required="">
+                        </div>
+                        <div class="col mb-4">
+                          <input class="form-control form-control-lg" type="password" placeholder="Confirm Password" required="">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                            <div class="input-floating-label form-floating mb-4">
+                                <p>Dwellers Delight Livinng Ltd is committed to protecting and respecting your privacy, and we’ll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:</p>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" data-val="true" data-val-required="The I agree to receive other communications from Dwellers Delight Livinng Ltd. field is required." id="Communication" name="Communication" placeholder="" readonly="readonly" role="switch" type="checkbox" value="true"><input name="Communication" type="hidden" value="false">
+                                    <label class="form-label" for="Communication">I agree to receive other communications from Dwellers Delight Livinng Ltd.</label>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                            <div class="input-floating-label form-floating mb-4">
+                                <p>In order to provide you the content requested, we need to store and process your personal data. If you consent to us storing your personal data for this purpose, please tick the checkbox below.</p>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" data-val="true" data-val-required="The I agree to allow Dwellers Delight Livinng Ltd to store and process my personal data. field is required." id="DataAccessAgree" name="DataAccessAgree" placeholder="" readonly="readonly" role="switch" type="checkbox" value="true"><input name="DataAccessAgree" type="hidden" value="false">
+                                    <label class="form-label" for="DataAccessAgree">I agree to allow Dwellers Delight Livinng Ltd to store and process my personal data.</label>
+                                </div>
+                                <p>You can unsubscribe from these communications at any time. For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our Privacy Policy.</p>
+                            </div>
+                        </div>
+                    </div>
+                      <button class="btn btn-lg btn-primary w-100 mb-4" type="submit">Sign up</button>
+                    </form>
+                  </div>
+                </div>
               </div>
+              <div>Already a member? Let’s <a href="signin.html">Sign-In</a> and continue your property journey with us.</div>
             </div>
           </div>
         </div>
