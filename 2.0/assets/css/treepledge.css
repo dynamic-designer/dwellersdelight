@@ -1,0 +1,582 @@
+/* ======= Hero Section Styling ======= */
+.hero-section {
+    width: 100%; /* Full width */
+    margin-top: 100px; /* Reduced from 150px */
+    padding: 0;
+    height: auto; /* Changed from fixed height to auto */
+    margin-bottom: 20px; /* Added explicit bottom margin */
+}
+
+/* Hero Section */
+.hero {
+    background: url('../img/tree\ hero\ image.jpg') no-repeat center center/cover;
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    margin: 0 auto 20px; /* Changed from 10px auto to 0 auto 20px */
+    max-width: 82%;
+    overflow: hidden;
+}
+
+/* Adjust spacing for tablet view specifically */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-section {
+        margin-top: 80px; /* Further reduced for tablets */
+        margin-bottom: 10px; /* Smaller bottom margin */
+    }
+    
+    .hero {
+        height: 280px; /* Slightly shorter height */
+        margin-bottom: 10px; /* Reduced bottom margin */
+    }
+    
+    /* Adjust the spacing after hero section */
+    .hero + .container {
+        margin-top: 0; /* Remove any top margin on the container after hero */
+    }
+    
+    /* Fix the my-5 class which might be adding too much margin */
+    .my-5 {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Further adjustments for smaller tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .hero-section {
+        margin-top: 90px;
+        margin-bottom: 5px;
+    }
+    
+    .hero {
+        height: 250px;
+        margin-bottom: 5px;
+    }
+}
+
+
+.content-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content-section .text-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+.content-section .col-md-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-section img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Optional: Add some spacing between text elements */
+.text-content h2 {
+    margin-bottom: 1rem;
+}
+
+.text-content h4 {
+    margin-bottom: 1.5rem;
+}
+
+
+/* General Styles */
+.container {
+    max-width: 1150px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1f1f1f; /* Earthy green */
+    margin: 10px;
+
+}
+
+.container h4 {
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-left: 10px;
+}
+
+.container:not(footer .container) p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px;
+}
+
+.my-5 {
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Image Styling */
+/* Add these styles to align images with text */
+.row {
+    display: flex;
+    align-items: stretch;
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-fluid {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Optional: Add a max-height to prevent extremely tall images */
+.row .img-fluid {
+    max-height: 500px;
+}
+
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .row {
+        text-align: center;
+    }
+    
+    .col-md-6 img {
+        margin-bottom: 20px;
+    }
+}
+/* Certificate Section Styles */
+.certificate-section {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.certificate-container {
+    width: 100%;
+    max-width: 900px; /* Adjust based on your certificate's optimal display size */
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.certificate-container:hover {
+    transform: scale(1.01);
+}
+
+.img-certificate {
+    width: 100%;
+    height: auto;
+    margin-left: 10px;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Responsive Breakpoints */
+
+/* Large Screens (1200px and up) */
+@media (min-width: 1200px) {
+    .certificate-container {
+        max-width: 900px;
+    }
+}
+
+/* Medium Screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .certificate-container {
+        max-width: 800px;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .certificate-container {
+        max-width: 700px;
+    }
+    
+    .certificate-section {
+        padding: 15px 0;
+    }
+}
+
+/* Large Mobile (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .certificate-container {
+        max-width: 90%;
+    }
+    
+    .certificate-section {
+        padding: 10px 0;
+    }
+}
+
+/* Small Mobile (575px and below) */
+@media (max-width: 575px) {
+    .certificate-container {
+        max-width: 95%;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .certificate-section {
+        padding: 5px 0;
+    }
+    
+    .img-certificate {
+        border-radius: 6px;
+    }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+    .features .container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    #benefits .col-md-4 {
+        flex: 0 0 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        height: 40vh;
+    }
+    
+    .features h2 br {
+        display: none;
+    }
+    
+    .demo {
+        padding: 50px 15px;
+    }
+    
+    .quote {
+        background-attachment: scroll;
+    }
+    
+    #benefits {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 35vh;
+    }
+    
+    .features {
+        padding: 40px 0;
+    }
+    
+    .features h2 {
+        margin-bottom: 30px;
+    }
+    
+    .features .container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    #benefits .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    
+    .quote {
+        min-height: 350px;
+        padding: 40px 0;
+    }
+    
+    .quote .lead {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 30vh;
+        min-height: 200px;
+    }
+    
+    .features {
+        padding: 30px 0;
+    }
+    
+    .features h2 {
+        margin-bottom: 20px;
+    }
+    
+    .card.feature-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .demo {
+        padding: 40px 10px;
+    }
+    
+    .demo h2 {
+        margin-bottom: 20px;
+    }
+    
+    #benefits {
+        padding: 40px 0;
+    }
+    
+    #benefits .section-title {
+        margin-bottom: 30px;
+    }
+    
+    #benefits .col-md-4 {
+        padding: 20px 15px;
+    }
+    
+    .quote {
+        min-height: 300px;
+        padding: 30px 0;
+    }
+    
+    .contact-btn {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+    .card.feature-card:hover,
+    #benefits .col-md-4:hover,
+    .social-icon:hover,
+    .contact-btn:hover {
+        transform: none;
+    }
+    
+    .card.feature-card:active,
+    #benefits .col-md-4:active,
+    .social-icon:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Fix for iOS background-attachment: fixed issue */
+@supports (-webkit-touch-callout: none) {
+    .quote {
+        background-attachment: scroll;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .hero {
+        height: 300px;
+    }
+
+    .Brand-1, .Brand-2, .Brand-3 {
+        height: 450px;
+    }
+
+    .brand-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand-logo {
+        width: 100px;
+    }
+
+    .brand-text {
+        max-width: 100%;
+    }
+
+    .excellence-section {
+        flex-direction: column;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .excellence-image {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 250px;
+        font-size: 20px;
+    }
+
+    .Brand-1, .Brand-2, .Brand-3 {
+        height: 350px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand-container {
+        flex-direction: column;
+    }
+
+    .brand-logo {
+        width: 80px;
+    }
+
+    .excellence-section {
+        font-size: 1.8rem;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 200px;
+        font-size: 18px;
+    }
+
+    .brand-text {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .Brand-1, .Brand-2, .Brand-3 {
+        height: 350px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .excellence-section {
+        font-size: 1.5rem;
+    }
+
+    .excellence-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* 🌟 Mobile Responsive Styles */
+@media (max-width: 1024px) {
+    .auth-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* 🌟 Mobile Screens (Up to 768px) */
+@media (max-width: 768px) {
+    .hero {
+        height: 200px;
+        max-width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .tree-section, .tree-sections, .book-plant-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content, .contents, .text-container {
+        padding: 10px;
+        margin-left: 0;
+    }
+
+    .image-container img, .image-box img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        border-radius: 10px;
+    }
+
+    .certificate-section {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .clickable-image {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+
+/* 🌟 Extra Small Screens (Up to 480px) */
+@media (max-width: 480px) {
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+        width: 90px;
+    }
+
+    .hero {
+        height: 180px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .tree-section, .tree-sections, .book-plant-section {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .image-container img, .image-box img {
+        width: 100%;
+        height: auto;
+    }
+}

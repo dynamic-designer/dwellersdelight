@@ -1,0 +1,182 @@
+.custom-button {
+    background-color: white;
+    color: #1A1A4B;
+    border: none;
+    padding: 8px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+.benefits-section {
+    background-color: #1A1A4C;
+    color: white;
+    padding: 60px 0;
+}
+
+.benefit-item img {
+    width: 99px;
+    margin-bottom: 15px;
+}
+
+.benefit-item h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.benefit-item p {
+    font-size: 0.95rem;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    /* Pehle 60vh tha, ab 45vh */
+    overflow: hidden;
+}
+
+.hero-section img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 35vh;
+        /* Tablet ke liye aur kam */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 30vh;
+        /* Mobile ke liye aur bhi kam */
+    }
+}
+
+.partner-section {
+    position: relative;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+}
+
+.partner-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.partner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    /* Space between text and button */
+    margin-left: -370px;
+}
+
+.partner-text {
+    font-size: 60PX;
+    font-weight: bold;
+    color: #1A1AFF;
+    margin-left: 20PX;
+}
+
+.btn-signup {
+    background-color: #1A1A3C;
+    /* Dark blue */
+    color: white;
+    border-radius: 25px;
+    padding: 20px 95px;
+    /* Default padding for larger screens */
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+    /* Smooth hover effect */
+}
+
+/* Hover effect */
+.btn-signup:hover {
+    background-color: #1A1A3C !important;
+    color: white !important;
+}
+
+/* Tablet view: Adjust padding for medium screens (768px to 991px) */
+@media (max-width: 991px) {
+    .btn-signup {
+        padding: 15px 70px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile view: Adjust button and text */
+@media (max-width: 767px) {
+    .partner-text {
+        font-size: 40px;
+        /* Reduce text size */
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 350px;
+        gap: -40px;
+    }
+
+    .btn-signup {
+        padding: 11px 25px;
+        font-size: 0.85rem;
+        border-radius: 20px;
+
+        display: block;
+        margin: 0 auto;
+        /* Center align */
+    }
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+    margin-top: 80px;
+    font-size: 40px;
+    color: white;
+}

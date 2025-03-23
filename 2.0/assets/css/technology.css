@@ -1,0 +1,839 @@
+/* 🔹 Default styling for large screens */
+.imgs-fluid {
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+/* 🔹 Mobile view: Full image height */
+@media (max-width: 768px) {
+  .img-fluid {
+      max-height: 100vh !important; /* Full height on mobile */
+      width: 100% !important;
+      object-fit: cover;
+  }
+
+  /* 🔹 Centered text positioning for mobile */
+  .position-absolute {
+      font-size: 1.5rem !important; /* Smaller text size for mobile */
+  }
+}
+.position-absolute {
+      font-size: 80px !important; /* Adjust font size for mobile */
+      white-space: nowrap; /* Prevent text from wrapping */
+      width: 60%; /* Ensure it aligns properly */
+      text-align: center; /* Center text */
+      margin-left: -10px;
+      margin-top: 55px;
+  }
+.imgs-fluid {
+  width: 100%; 
+  height: auto; 
+  min-height: 200px; /* Adjust as per your need */
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .position-absolute {
+      font-size: 80px !important; /* Adjust font size for mobile */
+      white-space: nowrap; /* Prevent text from wrapping */
+      width: 60%; /* Ensure it aligns properly */
+      text-align: center; /* Center text */
+      margin-left: -60px;
+      margin-top: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  .position-absolute {
+      font-size: 80px !important; /* Adjust font size for mobile */
+      white-space: nowrap; /* Prevent text from wrapping */
+      width: 60%; /* Ensure it aligns properly */
+      text-align: center; /* Center text */
+      margin-left: -60px;
+      margin-top: 15px;
+  }
+}
+/* If you're using a different class for your hero image container, use that instead */
+#hero, .hero-container {
+  padding-top: 80px;
+}
+
+/* Alternative approach using margin instead of padding */
+
+.hero {
+  margin-top: 80px;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('../img/hero\ img.png') no-repeat center center/cover;
+    height: 600px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Features Section */
+.features {
+    background-color: #cac1bc;
+    padding: 60px 0;
+}
+
+.features h2 {
+    color: #252c5a;
+    font-size: clamp(1.5rem, 3vw, 2.8rem);
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding: 0 15px;
+    line-height: 1.3;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 0px;
+    height: auto;
+}
+
+.features .row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.features .col-md-4, .features .col-sm-6 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Feature Card */
+.card.feature-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 300px;
+    margin: 0px;
+}
+
+.card.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.card-text {
+    font-size: clamp(1.1rem, 2vw, 1.8rem);
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Demo Section - Simple Centered Version */
+.demo {
+    background-color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.demo .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.demo h2 {
+    color: #252c5a;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.demo-subtitle {
+    color: #555;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.ratio {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.demo-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+    .demo {
+        padding: 50px 15px;
+    }
+    
+    .demo-subtitle {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .demo {
+        padding: 40px 15px;
+    }
+    
+    .demo h2 {
+        margin-bottom: 10px;
+    }
+    
+    .demo-subtitle {
+        margin-bottom: 20px;
+    }
+}
+
+/* Benefits Section - Improved Responsiveness */
+#benefits {
+  background: linear-gradient(135deg, #1e2654 0%, #252c5a 50%, #1a1f45 100%);
+  color: #f8f9fa;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  height: auto; /* Remove fixed height */
+}
+
+#benefits::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.container-2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+#benefits .section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+#benefits .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.2) 100%);
+}
+
+/* Benefits Section - Optimized for Performance */
+#benefits {
+  background: linear-gradient(135deg, #1e2654 0%, #252c5a 50%, #1a1f45 100%);
+  color: #f8f9fa;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  will-change: contents; /* Performance hint for browsers */
+}
+
+#benefits::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.container-2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+#benefits .section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+#benefits .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.2) 100%);
+}
+
+/* Benefits row structure */
+#benefits .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -10px;
+  width: 100%;
+}
+
+/* Benefit item - No transitions */
+#benefits .col-md-4 {
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+}
+
+/* Icon styling - No transitions */
+#benefits i {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Heading styling - No transitions */
+#benefits h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+#benefits h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Paragraph styling - No transitions */
+#benefits p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* Remove all animations */
+#benefits .col-md-4:nth-child(1),
+#benefits .col-md-4:nth-child(2),
+#benefits .col-md-4:nth-child(3),
+#benefits .col-md-4:nth-child(4),
+#benefits .col-md-4:nth-child(5),
+#benefits .col-md-4:nth-child(6) {
+  animation: none;
+}
+
+/* Responsive adjustments for benefits section */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #benefits .col-md-4 {
+    width: calc(33.333% - 20px);
+    padding: 25px 15px;
+  }
+  
+  #benefits i {
+    font-size: 3rem;
+  }
+  
+  #benefits h4 {
+    font-size: 1.3rem;
+  }
+  
+  #benefits p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #benefits {
+    padding: 50px 0;
+  }
+  
+  #benefits .section-title {
+    margin-bottom: 30px;
+  }
+  
+  #benefits .col-md-4 {
+    width: calc(50% - 20px);
+    padding: 20px 15px;
+  }
+  
+  #benefits i {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  
+  #benefits h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  #benefits {
+    padding: 40px 0;
+  }
+  
+  #benefits .section-title {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+  }
+  
+  #benefits .col-md-4 {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px auto;
+    padding: 20px 15px;
+  }
+  
+  #benefits i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  #benefits h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+  
+  #benefits p {
+    font-size: 0.95rem;
+  }
+  
+  #benefits .row {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #benefits {
+    padding: 30px 0;
+  }
+  
+  #benefits .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  #benefits .col-md-4 {
+    padding: 15px 10px;
+  }
+  
+  #benefits i {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+  }
+  
+  #benefits h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+  
+  #benefits p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Quote Section - Improved Responsiveness */
+.quote {
+  position: relative;
+  background-image: url('../img/Contact\ us.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* Changed from fixed for better mobile support */
+  min-height: 300px; /* Minimum height instead of fixed */
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+}
+
+.quote-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.quote .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quote .row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.quote .col-lg-8 {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 15px;
+}
+
+.quote .lead {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  color: #252c5a;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn {
+  background-color: #252c5a;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  border: 1px solid #252c5a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.733);
+  background-color: #1f4494;
+  border: 1px solid #1f4494;
+  color: #ffffff;
+}
+
+/* Responsive adjustments for quote section */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .quote {
+    min-height: 280px;
+    padding: 50px 0;
+  }
+  
+  .quote .lead {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .quote {
+    min-height: 250px;
+    padding: 40px 0;
+  }
+  
+  .quote .lead {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-btn {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .quote {
+    min-height: 220px;
+    padding: 30px 0;
+  }
+  
+  .quote .lead {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  
+  .contact-btn {
+    padding: 0.6rem 1.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    min-height: 200px;
+    padding: 25px 0;
+  }
+  
+  .quote .lead {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+  
+  .contact-btn {
+    padding: 0.5rem 1.4rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Fix for iOS background-attachment issue */
+@supports (-webkit-touch-callout: none) {
+  .quote {
+    background-attachment: scroll;
+  }
+}
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+    .features .container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    #benefits .col-md-4 {
+        flex: 0 0 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        height: 40vh;
+    }
+    
+    .features h2 br {
+        display: none;
+    }
+    
+    .demo {
+        padding: 50px 15px;
+    }
+    
+    .quote {
+        background-attachment: scroll;
+    }
+    
+    #benefits {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 35vh;
+    }
+    
+    .features {
+        padding: 40px 0;
+    }
+    
+    .features h2 {
+        margin-bottom: 30px;
+    }
+    
+    .features .container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    #benefits .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    
+    .quote {
+        min-height: 350px;
+        padding: 40px 0;
+    }
+    
+    .quote .lead {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 30vh;
+        min-height: 200px;
+    }
+    
+    .features {
+        padding: 30px 0;
+    }
+    
+    .features h2 {
+        margin-bottom: 20px;
+    }
+    
+    .card.feature-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .demo {
+        padding: 40px 10px;
+    }
+    
+    .demo h2 {
+        margin-bottom: 20px;
+    }
+    
+    #benefits {
+        padding: 40px 0;
+    }
+    
+    #benefits .section-title {
+        margin-bottom: 30px;
+    }
+    
+    #benefits .col-md-4 {
+        padding: 20px 15px;
+    }
+    
+    .quote {
+        min-height: 300px;
+        padding: 30px 0;
+    }
+    
+    .contact-btn {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+    .card.feature-card:hover,
+    #benefits .col-md-4:hover,
+    .social-icon:hover,
+    .contact-btn:hover {
+        transform: none;
+    }
+    
+    .card.feature-card:active,
+    #benefits .col-md-4:active,
+    .social-icon:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Fix for iOS background-attachment: fixed issue */
+@supports (-webkit-touch-callout: none) {
+    .quote {
+        background-attachment: scroll;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

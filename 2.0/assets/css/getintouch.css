@@ -1,0 +1,301 @@
+.custom-button {
+  background-color: white;
+  color: #1A1A4B;
+  border: none;
+  padding: 8px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+
+}
+
+.compliance-logos img {
+  max-width: 50px;
+  margin-left: 10px;
+}
+
+.office-section {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(37, 44, 90);
+}
+
+.swiper-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.swiper-slide {
+  width: 200px;
+  /* Adjust width */
+  height: 600px;
+  /* Adjust height */
+  padding: 20px;
+  background: rgb(202, 193, 188);
+  /* Adjust background if needed */
+  border-radius: 150px;
+}
+
+.swiper {
+  width: 90%;
+  /* Adjust width */
+  max-width: 1200px;
+  margin: auto;
+}
+
+.quote {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1b2553;
+  margin-top: 99px;
+}
+
+.testimonial-text {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.testimonial-content {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.customer {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+  margin-top: 60px;
+
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 40px;
+  /* Increase margin if needed */
+}
+
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 90%;
+    /* Full width on mobile */
+
+  }
+}
+
+.form-section {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* Width & Center Alignment */
+  max-width: 1100px;
+  /* Adjust width as needed */
+
+
+
+  /* Height (Optional) */
+  min-height: 400px;
+  /* Adjust as needed */
+
+  /* Centering 
+margin: 50px 30px; /* Centers the form horizontally */
+
+  /* Optional: Left & Right spacing */
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 5px;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: inherit;
+}
+
+.btn-submit {
+  background-color: #00008b;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 15%;
+  height: 40px;
+}
+
+.btn-submit:hover {
+  background-color: #00006b;
+}
+
+.checkbox-label {
+  font-size: 14px;
+}
+
+.policy-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.policy-text a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.policy-text a:hover {
+  text-decoration: underline;
+}
+
+/* Center the text */
+.enquiry-section {
+  background-color: #f8f9fa;
+  padding: 5px 20px;
+  text-align: center;
+
+}
+
+.enquiry-item {
+  padding: 20px;
+
+}
+
+/* Heading style */
+.enquiry-title {
+  font-weight: bold;
+  font-size: 45px;
+  color: #1a1a2e;
+
+}
+
+.sales-email {
+  color: #1d5a9b;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.sales-email:hover {
+  color: #1d5a9b;
+  /* Darker shade on hover */
+
+}
+
+.general-email {
+  color: #1d5a9b;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  margin-top: 44px;
+}
+
+.general-email:hover {
+  color: #1d5a9b;
+  /* Darker shade on hover */
+
+}
+
+
+/* Responsive Icons */
+.enquiry-icon {
+
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* 🔹 Default styling for large screens */
+.imgs-fluid {
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+/* 🔹 Mobile view: Full image height */
+@media (max-width: 768px) {
+  .img-fluid {
+    max-height: 100vh !important;
+    /* Full height on mobile */
+    width: 100% !important;
+    object-fit: cover;
+  }
+
+  /* 🔹 Centered text positioning for mobile */
+  .position-absolute {
+    font-size: 1.5rem !important;
+    /* Smaller text size for mobile */
+  }
+}
+
+.position-absolute {
+  /* Adjust font size for mobile */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  width: 60%;
+  /* Ensure it aligns properly */
+  text-align: center;
+  /* Center text */
+  margin-left: -10px;
+  margin-top: 55px;
+}
+
+.imgs-fluid {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  /* Adjust as per your need */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .position-absolute {
+    /* Adjust font size for mobile */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    width: 60%;
+    /* Ensure it aligns properly */
+    text-align: center;
+    /* Center text */
+    margin-left: -60px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .position-absolute {
+    /* Adjust font size for mobile */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    width: 60%;
+    /* Ensure it aligns properly */
+    text-align: center;
+    /* Center text */
+    margin-left: -60px;
+    margin-top: 15px;
+  }
+}
